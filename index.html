@@ -118,33 +118,33 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-    $( document ).ready(function() {
-        var learn_distance = $('#learn').position().top,
-            socialise_distance = $('#socialise').position().top,
-            code_distance = $('#code').position().top,
-            $window = $(window);
+    // $( document ).ready(function() {
+    //     var learn_distance = $('#learn').position().top,
+    //         socialise_distance = $('#socialise').position().top,
+    //         code_distance = $('#code').position().top,
+    //         $window = $(window);
 
-        $window.scroll(function() {
-            learn_distance = $('#learn').position().top,
-            socialise_distance = $('#socialise').position().top,
-            code_distance = $('#code').position().top
-            if ( $window.scrollTop() >= learn_distance ) {
-                $('#learn').addClass('fixed')
-            } else {
-                $('#learn').removeClass('fixed')
-            }
-            if ( $window.scrollTop() >= socialise_distance ) {
-                $('#socialise').addClass('fixed')
-            } else {
-                $('#socialise').removeClass('fixed')
-            }
-            if ( $window.scrollTop() >= code_distance ) {
-                $('#code').addClass('fixed')
-            } else {
-                $('#code').removeClass('fixed')
-            }
-        });
-    });
+    //     $window.scroll(function() {
+    //         learn_distance = $('#learn').position().top,
+    //         socialise_distance = $('#socialise').position().top,
+    //         code_distance = $('#code').position().top
+    //         if ( $window.scrollTop() >= learn_distance ) {
+    //             $('#learn').addClass('fixed')
+    //         } else {
+    //             $('#learn').removeClass('fixed')
+    //         }
+    //         if ( $window.scrollTop() >= socialise_distance ) {
+    //             $('#socialise').addClass('fixed')
+    //         } else {
+    //             $('#socialise').removeClass('fixed')
+    //         }
+    //         if ( $window.scrollTop() >= code_distance ) {
+    //             $('#code').addClass('fixed')
+    //         } else {
+    //             $('#code').removeClass('fixed')
+    //         }
+    //     });
+    // });
     </script>
 </body>
 
