@@ -1,0 +1,715 @@
+/*
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+
+/*--------------------------------------------------------------
+Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	height: 100%;
+}
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active {
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #fff;
+	font-family: Signika Negative;
+	font-size: 18px;
+	line-height: 1.5;
+	height: 100%;
+	font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	line-height: 1.2;
+	margin-bottom: 15px;
+	font-weight: 400;
+}
+h1 { font-size: 44px; }
+h2 { font-size: 40px; }
+h3 { font-size: 36px; }
+h4 { font-size: 32px; }
+h5 { font-size: 28px; }
+h6 { font-size: 24px; }
+p {
+	font-size: 18px;
+	margin-bottom: 15px;
+	font-weight: 300;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 15px;
+}
+address {
+	margin: 0 0 15px;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	line-height: 1.6;
+	margin-bottom: 16px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 16px;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 15px;
+}
+ul, ol {
+	margin: 0 0 15px 30px;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 15px 15px;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 15px;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+	margin-bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+Clearfix hack
+--------------------------------------------------------------*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+	height:1%;
+}
+.clearfix {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+Forms
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 3px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/*--------------------------------------------------------------
+Links
+--------------------------------------------------------------*/
+a {
+	color: #1BBC9B;
+	text-decoration: none;
+}
+a:visited {
+	color: purple;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #1BBC9B;
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+Alignment
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 15px;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 15px;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 15px;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 8px 0;
+}
+
+/*--------------------------------------------------------------
+Media
+--------------------------------------------------------------*/
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+Galleries
+--------------------------------------------------------------*/
+.gallery { 
+	margin: 0 auto 20px; 
+}
+.gallery .gallery-item { 
+	float: left; 
+	display: block; 
+	background: #fff; 
+	margin: 10px 1.5% 20px; 
+	text-align: center;
+}
+.gallery .gallery-item:hover { }
+.gallery .gallery-icon { 
+	text-align: center; 
+	padding: 0; 
+	margin: 0; 
+	overflow: hidden; 
+	line-height: 0; 
+}
+.gallery-columns-1 .gallery-item { float: none; text-align: center; width:100%; margin: 10px 0 20px; }
+.gallery-columns-2 .gallery-item { width:47%; }
+.gallery-columns-3 .gallery-item { width:30.33%; }
+.gallery-columns-4 .gallery-item { width:22%; }
+.gallery-columns-5 .gallery-item { width:17%; }
+.gallery-columns-6 .gallery-item { width:13.6%; }
+.gallery-columns-7 .gallery-item { width:12.25%; margin:10px 1% 10px; }
+.gallery-columns-8 .gallery-item { width:10.5%; margin:10px 1% 10px; }
+.gallery-columns-9 .gallery-item { width:9.11%; margin:10px 1% 10px; }
+.gallery dl a { 
+	display: block; 
+}
+.gallery dl a img { 
+	height: auto; 
+	margin: 0 auto;
+}
+.gallery .gallery-caption { 	
+	font-size: 20px; 
+	line-height: 1.2; 
+	margin: 10px 0 0; 
+}
+.gallery br+br { display:none; }
+
+/*--------------------------------------------------------------
+Body
+--------------------------------------------------------------*/
+.page-wrap {
+	min-height: 100%;
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+Main Content Section
+--------------------------------------------------------------*/
+#content {
+	padding: 90px 50px 50px;
+}
+.logo{
+	text-align: center;
+}
+.site-title {
+	text-align: center;
+	text-shadow: 0 0 1px #444444;
+	font-size: 50px;
+	word-spacing: 10px;
+}
+.construction-msg {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+Social Icons
+--------------------------------------------------------------*/
+.social-icons {
+	max-width: 100%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.social-icons ul {
+	margin: 0;
+}
+.social-icons ul li {
+   display: inline;
+   margin: 0 4px;
+}
+.social-icons i.fa {
+	font-size: 18px;
+	color: #fff;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	line-height: 46px;
+	margin-bottom: 10px;
+}
+.fa-facebook { background-color: #3b5a9b; }
+.fa-twitter { background-color: #1bb2e9; }
+.fa-google-plus { background-color: #dc4937; }
+.fa-youtube { background-color: #cf3427; }
+.fa-tumblr { background-color: #62afd1; }
+.fa-pinterest { background-color: #d5282e; }
+.fa-linkedin { background-color: #007bb6; }
+
+/*--------------------------------------------------------------
+Subscribe Section
+--------------------------------------------------------------*/
+#newsletter {
+	background: rgba( 0, 0, 0, 0.6);
+	padding: 80px 50px;
+}
+#content-wrap section:nth-last-child(2) {
+	padding-bottom: 145px;
+}
+.mp-one-half {
+	float: left;
+	width: 48%;
+}
+.mp-one-half-last {
+	float: right;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 1130px;
+	position: relative;	
+}
+.response {
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-ms-transform: translateY(-50%); /* IE 9 */
+   -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	transform: translateY(-50%);
+	width: 100%;
+	font-size: 24px;
+	text-align: center;
+}
+#newsletter .alert input::-webkit-input-placeholder{
+  color: RED;
+}
+.alert {
+	color:RED;
+}
+.newsletter-content .entry-title {
+	font-size: 40px;
+}
+.subscribe-form {
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%); /* IE 9 */
+   -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	transform: translateY(-50%);
+	right: 0;
+}
+.sign-up {
+	background-color: #fff;
+	float: right;
+	width: 100%;
+}
+.email-field {
+	float: left;
+	width: 75%;
+}
+.email-field input {
+	border: 0 none;
+	border-radius: 0;
+	height: 51px;
+	padding: 0 4%;
+	width: 100%;
+}
+.subscribe-button {
+	float: right;
+	width: 25%;
+}
+.subscribe-button a {
+	color: #ffffff;
+}
+.subscribe-button button {
+	background: #1bbc9b;
+	box-shadow: none;
+	border: none;
+	padding: 17px 0;
+	border-radius: 0;
+	font-size: 18px;
+	color: #ffffff;
+	text-shadow: none;
+	width: 100%;
+	text-align: center;
+}
+.subscribe-button button:hover {
+	background-color: #2f343a;
+	transition: all 0.3s ease 0s;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+#colophon {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	padding: 0 50px;
+}
+.copyright {
+	text-align: center;
+	padding: 20px 0;
+}
+
+/*--------------------------------------------------------------
+Responsive Structure
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+	.mp-one-half, .mp-one-half-last {
+		float: none;
+		width: 100%;
+	}
+	.subscribe-form {
+		position: static;
+	}
+	#newsletter .entry-title, #newsletter p {
+		text-align: center;
+	}
+	.response {
+		margin-top: 30px;
+	}
+}
+@media screen and (max-width: 600px) {
+	#content, #newsletter, #colophon {
+		padding-left: 15px;
+		padding-right: 15px;
+	}	
+	.site-title {
+		font-size: 30px;
+		word-spacing: 0;
+	}
+	.newsletter-content .entry-title {
+		font-size: 26px;
+	}
+	body, p {
+		font-size: 16px;
+	}
+	.subscribe-button button {
+		font-size: 16px;
+		padding: 18px 0;
+	}
+	#colophon {
+		height: auto;
+	}
+}
+@media screen and (max-width: 400px) {
+	.email-field, .subscribe-button {
+		float: none;
+		width: 100%;
+	}
+	.email-field input {
+		text-align: center;
+	}
+}
