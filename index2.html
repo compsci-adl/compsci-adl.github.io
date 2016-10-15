@@ -14,6 +14,8 @@
     <link href="css/styles_2.css" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/icon.png">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,12 +32,13 @@
         <div class="container nav-wrapper">
             <!--<a href="#" class="brand-logo">Computer Science Club</a>-->
             <!--<a href="#" class="brand-logo hide-on-large-only">CS Club</a>-->
-            <img src="images/logo_sm.png" height="100%" style="padding:10px;">
+            <img id="logo" src="images/logo_sm.png" height="100%">
+            <a href="#" class="brand-logo">CS Club</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Join</a></li>
-                    <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
         </div>
@@ -43,15 +46,10 @@
     </div>
 
     <ul id="slide-out" class="side-nav">
-        <li><div class="userView">
-            <a href="#!name"><span class="white-text name">John Doe</span></a>
-            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li class="active"><a href="#"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="#"><i class="material-icons">info</i>About</a></li>
+        <li><a href="#"><i class="material-icons">person_add</i>Join</a></li>
+        <li><a href="#"><i class="material-icons">email</i>Contact</a></li>
     </ul>
 
     <div id="header-fill"></div>
@@ -60,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s10 offset-s1 m6 offset-m3">
-                    <img src="images/logo.png" style="width:100%;">
+                    <img id="header-logo" src="images/logo.png" style="width:100%;">
                 </div>
             </div>
             <div class="row">
@@ -136,6 +134,23 @@
     <script>
     $( document ).ready(function() {
         $(".button-collapse").sideNav();
+
+        // navbar logo
+        $("#logo").hide(); // hide the fixed navbar initially
+
+        var topofDiv = $("#header-logo").offset().top; //gets offset of #header-logo
+        var height = $("#header-logo").outerHeight(); //gets height of #header-logo
+
+        $(window).scroll(function(){
+            if($(window).scrollTop() > (topofDiv + height)){
+            $("#logo").fadeIn({queue:false, duration:400});
+            $(".brand-logo").addClass('with-logo');
+            }
+            else{
+            $("#logo").fadeOut({duration:400});
+            $(".brand-logo").removeClass('with-logo');
+            }
+        });
     //     var learn_distance = $('#learn').position().top,
     //         socialise_distance = $('#socialise').position().top,
     //         code_distance = $('#code').position().top,

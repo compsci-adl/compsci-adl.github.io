@@ -38,6 +38,26 @@ header .container {
   right: 0;
 }
 
+#logo {
+  padding: 10px;
+  display: inline;
+  position: absolute;
+}
+
+.brand-logo {
+  transition: all 400ms ease-in-out;
+  left: 0;
+}
+.brand-logo.with-logo {
+  left: 54px;
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo.with-logo {
+    left: 50%;
+  }
+}
+
 .navbar-fixed {
   z-index: 997;
   /*height: 0;*/
