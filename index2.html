@@ -14,8 +14,9 @@
     <link href="css/styles_2.css" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./images/icon.png">
+    <link rel="icon" type="image/png" href="images/icon.png">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,12 +33,13 @@
         <div class="container nav-wrapper">
             <!--<a href="#" class="brand-logo">Computer Science Club</a>-->
             <!--<a href="#" class="brand-logo hide-on-large-only">CS Club</a>-->
-            <img id="logo" src="images/logo_sm.png" height="100%">
+            <img id="logo" src="images/logo_sm.png" height="100%" style="display:none;">
             <a href="#" class="brand-logo">CS Club</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Join</a></li>
+                <li><a href="#">Support</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
@@ -46,6 +48,16 @@
     </div>
 
     <ul id="slide-out" class="side-nav">
+        <li class="logo">
+            <a id="logo-container" href="#" class="brand-logo">                        
+                <img src="images/logo.png" height="100%">
+            </a>
+        </li>
+        <li class="search">
+          <div class="search-wrapper card">
+            <input id="search" placeholder="Search"><i class="material-icons">search</i>
+          </div>
+        </li>
         <li class="active"><a href="#"><i class="material-icons">home</i>Home</a></li>
         <li><a href="#"><i class="material-icons">info</i>About</a></li>
         <li><a href="#"><i class="material-icons">person_add</i>Join</a></li>
@@ -57,13 +69,13 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col s10 offset-s1 m6 offset-m3">
+                <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
                     <img id="header-logo" src="images/logo.png" style="width:100%;">
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <h1>Something nice written here</h1>
+                <div class="col s12">
+                    <h1 class="center"><span id="tagline"></span></h1>
                 </div>
             </div>
         </div>
@@ -77,77 +89,141 @@
  -->
 
     <div id="learn" class="section">
-        <div class="header-banner container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Learn</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis. Sed efficitur, ante eu luctus molestie, urna ex viverra est, vel vulputate eros erat vel elit. Praesent faucibus velit ac nunc ornare, eget lacinia felis fringilla. Praesent at vehicula eros. Nunc purus sem, scelerisque non ex id, placerat tristique arcu.
+
+                        Sed nulla velit, accumsan eget lectus at, bibendum consectetur est. Sed ornare turpis orci, vel rutrum massa porta a. Donec fermentum est mi, id luctus tortor pulvinar non. Nullam vel ipsum non est vulputate gravida. Aliquam euismod nisi quis semper pharetra. Sed vehicula tincidunt erat quis convallis. Etiam semper nulla ac lacinia porta. Nulla pellentesque molestie dolor.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer container-full">
             <div class="container">
-                <h1>Learn</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis.
+                </p>
             </div>
         </div>
     </div>
     
     <div id="socialise" class="section">
-        <div class="header-banner container-fluid">
-            <div class="container">
-                <h1>Socialise</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Socialise</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis. Sed efficitur, ante eu luctus molestie, urna ex viverra est, vel vulputate eros erat vel elit. Praesent faucibus velit ac nunc ornare, eget lacinia felis fringilla. Praesent at vehicula eros. Nunc purus sem, scelerisque non ex id, placerat tristique arcu.
+
+                        Sed nulla velit, accumsan eget lectus at, bibendum consectetur est. Sed ornare turpis orci, vel rutrum massa porta a. Donec fermentum est mi, id luctus tortor pulvinar non. Nullam vel ipsum non est vulputate gravida. Aliquam euismod nisi quis semper pharetra. Sed vehicula tincidunt erat quis convallis. Etiam semper nulla ac lacinia porta. Nulla pellentesque molestie dolor.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div>
+        <div class="section-footer container-full">
+            <div class="container">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis. Sed efficitur, ante eu luctus molestie, urna ex viverra est, vel vulputate eros erat vel elit. Praesent faucibus velit ac nunc ornare, eget lacinia felis fringilla. Praesent at vehicula eros. Nunc purus sem, scelerisque non ex id, placerat tristique arcu.
-
-                    Sed nulla velit, accumsan eget lectus at, bibendum consectetur est. Sed ornare turpis orci, vel rutrum massa porta a. Donec fermentum est mi, id luctus tortor pulvinar non. Nullam vel ipsum non est vulputate gravida. Aliquam euismod nisi quis semper pharetra. Sed vehicula tincidunt erat quis convallis. Etiam semper nulla ac lacinia porta. Nulla pellentesque molestie dolor.
-
-                    Nulla vitae neque vel nunc rhoncus suscipit sed eu neque. Praesent ut orci non tortor pharetra cursus. Etiam tincidunt metus vitae neque vehicula, elementum varius quam semper. Nam et leo sed nunc consectetur maximus sit amet ac felis. Cras at felis vel nisl cursus convallis. Proin dignissim varius nulla, non porta urna sollicitudin ut. Integer mattis aliquet nulla vel viverra. Aenean consequat mi non felis consectetur mollis. Donec et elit tortor. Duis interdum elit in feugiat ornare. Sed dignissim pulvinar mi et euismod. Maecenas laoreet nisl vel ultrices feugiat.
-
-                    Donec accumsan in tellus et accumsan. Fusce sed erat sed sapien dictum ornare a a ligula. Vivamus ultricies diam eu metus dignissim, eget pharetra lorem consequat. Aliquam ornare justo a ante pulvinar dignissim. Etiam condimentum enim eros, at porttitor neque lacinia id. Suspendisse tristique libero ac pellentesque ornare. Morbi cursus tempor dui, efficitur rutrum mi congue eu. Morbi tortor risus, semper sed neque vitae, bibendum faucibus ligula. Nulla blandit interdum neque in vestibulum. Etiam volutpat urna massa, nec commodo ante pharetra at.
-
-                    Sed condimentum non sapien at cursus. Nulla vitae ultrices ipsum. Donec eu risus in nisl fermentum placerat nec quis dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Aenean congue congue sem eget condimentum. Aliquam erat volutpat. Donec volutpat arcu nec ipsum ultricies, in dapibus mi commodo. Sed bibendum ex ut dolor volutpat, sed facilisis tortor aliquet. Praesent aliquet, lacus convallis dapibus tincidunt, neque augue molestie nisl, eget aliquam eros tortor ac dolor. Aenean lobortis gravida enim, in pellentesque dui. Vestibulum interdum non lectus at aliquet. Donec pretium nec velit vitae tincidunt.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis. Sed efficitur, ante eu luctus molestie, urna ex viverra est, vel vulputate eros erat vel elit. Praesent faucibus velit ac nunc ornare, eget lacinia felis fringilla. Praesent at vehicula eros. Nunc purus sem, scelerisque non ex id, placerat tristique arcu.
-
-                    Sed nulla velit, accumsan eget lectus at, bibendum consectetur est. Sed ornare turpis orci, vel rutrum massa porta a. Donec fermentum est mi, id luctus tortor pulvinar non. Nullam vel ipsum non est vulputate gravida. Aliquam euismod nisi quis semper pharetra. Sed vehicula tincidunt erat quis convallis. Etiam semper nulla ac lacinia porta. Nulla pellentesque molestie dolor.
-
-                    Nulla vitae neque vel nunc rhoncus suscipit sed eu neque. Praesent ut orci non tortor pharetra cursus. Etiam tincidunt metus vitae neque vehicula, elementum varius quam semper. Nam et leo sed nunc consectetur maximus sit amet ac felis. Cras at felis vel nisl cursus convallis. Proin dignissim varius nulla, non porta urna sollicitudin ut. Integer mattis aliquet nulla vel viverra. Aenean consequat mi non felis consectetur mollis. Donec et elit tortor. Duis interdum elit in feugiat ornare. Sed dignissim pulvinar mi et euismod. Maecenas laoreet nisl vel ultrices feugiat.
-
-                    Donec accumsan in tellus et accumsan. Fusce sed erat sed sapien dictum ornare a a ligula. Vivamus ultricies diam eu metus dignissim, eget pharetra lorem consequat. Aliquam ornare justo a ante pulvinar dignissim. Etiam condimentum enim eros, at porttitor neque lacinia id. Suspendisse tristique libero ac pellentesque ornare. Morbi cursus tempor dui, efficitur rutrum mi congue eu. Morbi tortor risus, semper sed neque vitae, bibendum faucibus ligula. Nulla blandit interdum neque in vestibulum. Etiam volutpat urna massa, nec commodo ante pharetra at.
-
-                    Sed condimentum non sapien at cursus. Nulla vitae ultrices ipsum. Donec eu risus in nisl fermentum placerat nec quis dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Aenean congue congue sem eget condimentum. Aliquam erat volutpat. Donec volutpat arcu nec ipsum ultricies, in dapibus mi commodo. Sed bibendum ex ut dolor volutpat, sed facilisis tortor aliquet. Praesent aliquet, lacus convallis dapibus tincidunt, neque augue molestie nisl, eget aliquam eros tortor ac dolor. Aenean lobortis gravida enim, in pellentesque dui. Vestibulum interdum non lectus at aliquet. Donec pretium nec velit vitae tincidunt.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis.
                 </p>
             </div>
         </div>
     </div>
 
     <div id="code" class="section">
-        <div class="header-banner container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1>Code</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis. Sed efficitur, ante eu luctus molestie, urna ex viverra est, vel vulputate eros erat vel elit. Praesent faucibus velit ac nunc ornare, eget lacinia felis fringilla. Praesent at vehicula eros. Nunc purus sem, scelerisque non ex id, placerat tristique arcu.
+
+                        Sed nulla velit, accumsan eget lectus at, bibendum consectetur est. Sed ornare turpis orci, vel rutrum massa porta a. Donec fermentum est mi, id luctus tortor pulvinar non. Nullam vel ipsum non est vulputate gravida. Aliquam euismod nisi quis semper pharetra. Sed vehicula tincidunt erat quis convallis. Etiam semper nulla ac lacinia porta. Nulla pellentesque molestie dolor.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section-footer container-full">
             <div class="container">
-                <h1>Code</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis.
+                </p>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8">
+                    <h5>Computer Science Club</h5>
+                    <p>
+                        The University of Adelaide
+                    </p>
+                    <p>
+                        <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Join</a> | <a href="#">Contact</a>
+                    </p>
+                </div>
+                <div class="col s12 m4">
+                    <div class="search-wrapper card">
+                        <input class="search" placeholder="Search">
+                        <i class="material-icons">search</i>
+                    </div>
+                    <div>
+                        Connect with us<br>
+                        <span class="social-icons">
+                            <a href="#"><i class="fa fa-facebook-official"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <p>
+                        &copy; 2017 Computer Science Club. All rights reserved.
+                    </p>
+                </div>            
+            </div>            
+        </div>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/materialize.js"></script>
+    <script src="js/typed.js"></script>
 
     <script>
     $( document ).ready(function() {
         $(".button-collapse").sideNav();
 
         // navbar logo
-        $("#logo").hide(); // hide the fixed navbar initially
-
         var topofDiv = $("#header-logo").offset().top; //gets offset of #header-logo
         var height = $("#header-logo").outerHeight(); //gets height of #header-logo
 
         $(window).scroll(function(){
             if($(window).scrollTop() > (topofDiv + height)){
-            $("#logo").fadeIn({queue:false, duration:400});
+            $("#logo").stop().fadeIn({duration:400});
             $(".brand-logo").addClass('with-logo');
             }
             else{
-            $("#logo").fadeOut({duration:400});
+            $("#logo").stop().fadeOut({duration:400});
             $(".brand-logo").removeClass('with-logo');
             }
         });
@@ -176,6 +252,35 @@
     //             $('#code').removeClass('fixed')
     //         }
     //     });
+    if (!localStorage.getItem('csclub.org.au_visited')) {
+        $("#tagline").typed({
+            strings: [
+                "Workshops", 
+                "Social events", 
+                "Studying", 
+                'Computer Science Club<br><span class="typed-button">Join today!</span>'
+            ],
+            contentType: 'html',
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 500,
+            callback: function(){ typedCallback(); }
+        });
+    } else {
+        $('#tagline').html('Computer Science Club<br><span class="typed-button waves-effect waves-light btn">Join today!</span>');
+    }
+    });
+    function typedCallback() {
+        console.log('Callback');
+        $('.typed-cursor').addClass('invisible');
+        $('.typed-button').addClass('waves-effect waves-light btn');
+        localStorage.setItem('csclub.org.au_visited', true);        
+    }
+    $(document).on('keydown', function(e) {
+        if (e.keyCode == 65 && e.ctrlKey) {
+            e.preventDefault();
+            localStorage.removeItem('csclub.org.au_visited');        
+        }
     });
     </script>
 </body>
