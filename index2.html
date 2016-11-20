@@ -75,7 +75,7 @@
             </div>
             <div class="row">
                 <div class="col s12">
-                    <h1 class="center"><span id="tagline"></span></h1>
+                    <h4 class="center"><span id="tagline"></span></h4>
                 </div>
             </div>
         </div>
@@ -267,13 +267,13 @@
             callback: function(){ typedCallback(); }
         });
     } else {
-        $('#tagline').html('Computer Science Club<br><span class="typed-button waves-effect waves-light btn">Join today!</span>');
+        $('#tagline').html('Computer Science Club<br><span class="typed-button waves-effect waves-light btn flow-text">Join today!</span>');
     }
     });
     function typedCallback() {
         console.log('Callback');
         $('.typed-cursor').addClass('invisible');
-        $('.typed-button').addClass('waves-effect waves-light btn');
+        $('.typed-button').addClass('waves-effect waves-light btn flow-text');
         localStorage.setItem('csclub.org.au_visited', true);        
     }
     $(document).on('keydown', function(e) {

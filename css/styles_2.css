@@ -142,19 +142,32 @@ nav {
 }
 .section h1 {
   font-size: 8rem;
-  margin-bottom: 0;  
+  margin-bottom: 0;
+}
+.section h1::before {
+  font-family: 'FontAwesome';
+  padding-right: 0.5rem;
 }
 
 #learn h1 {
   color: #1BB8D1;
 }
+#learn h1::before {
+  content: '\f19d';
+}
 
 #socialise h1 {
   color: #FCC018;
 }
+#socialise h1::before {
+  content: '\f0c0';
+}
 
 #code h1 {
   color: #E71A64;
+}
+#code h1::before {
+  content: '\f121';
 }
 
 .section-footer {
@@ -256,6 +269,137 @@ footer a {
   padding: 0.2rem 1.5rem 0.5rem;
 }
 .typed-button.btn {
-  font-size: 2rem;
   background-color: #1BB8D1;
+}
+
+@media only screen and (min-width: 360px) {
+  .section h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  .section h1 {
+    font-size: 3.25rem;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .section h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .section h1 {
+    font-size: 3.75rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .section h1 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 510px) {
+  .section h1 {
+    font-size: 4.25rem;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .section h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 570px) {
+  .section h1 {
+    font-size: 4.75rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .section h1 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .section h1 {
+    font-size: 5.25rem;
+  }
+}
+
+@media only screen and (min-width: 660px) {
+  .section h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media only screen and (min-width: 690px) {
+  .section h1 {
+    font-size: 5.75rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .section h1 {
+    font-size: 6rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .section h1 {
+    font-size: 6.25rem;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  .section h1 {
+    font-size: 6.5rem;
+  }
+}
+
+@media only screen and (min-width: 810px) {
+  .section h1 {
+    font-size: 6.75rem;
+  }
+}
+
+@media only screen and (min-width: 840px) {
+  .section h1 {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  .section h1 {
+    font-size: 7.25rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .section h1 {
+    font-size: 7.5rem;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .section h1 {
+    font-size: 7.75rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .section h1 {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .section h1 {
+    font-size: 3rem;
+  }
 }
