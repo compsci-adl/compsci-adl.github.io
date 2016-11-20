@@ -215,7 +215,7 @@ nav {
 }
 
 footer {
-  color: #adb0b4;
+  color: #7a7f85;
   padding: 30px 0 15px;
   background-color: #313d4c;
 }
@@ -224,9 +224,14 @@ footer h2,
 footer h3, 
 footer h4, 
 footer h5 {
-  color: white;
+  /*color: white;*/
+  color: #adb0b4;
 }
 footer a {
+  color: #adb0b4;
+  transition: color .3s;
+}
+footer a:hover {
   color: white;
 }
 
@@ -264,12 +269,11 @@ footer a {
   transition: all 400ms ease-in-out;
   height: auto;
   line-height: initial;
-  text-transform: none;
-  margin-top: 15px;
-  padding: 0.2rem 1.5rem 0.5rem;
 }
 .typed-button.btn {
   background-color: #1BB8D1;
+  padding: 0.2rem 1.5rem 0.5rem;
+  margin-top: 15px;
 }
 
 @media only screen and (min-width: 360px) {
