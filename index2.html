@@ -66,7 +66,7 @@
 
     <div id="header-fill"></div>
 
-    <header>
+    <header class="header-home">
         <div class="container">
             <div class="row">
                 <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
@@ -75,7 +75,7 @@
             </div>
             <div class="row">
                 <div class="col s12">
-                    <h4 class="center"><span id="tagline"></span></h4>
+                    <h4 class="header-text center"><span id="tagline"></span></h4>
                 </div>
             </div>
         </div>
@@ -213,10 +213,9 @@
     $( document ).ready(function() {
         $(".button-collapse").sideNav();
 
-        // navbar logo
+        // Nav logo fade in/out
         var topofDiv = $("#header-logo").offset().top; //gets offset of #header-logo
         var height = $("#header-logo").outerHeight(); //gets height of #header-logo
-
         $(window).scroll(function(){
             if($(window).scrollTop() > (topofDiv + height)){
             $("#logo").stop().fadeIn({duration:400});
@@ -227,53 +226,30 @@
             $(".brand-logo").removeClass('with-logo');
             }
         });
-    //     var learn_distance = $('#learn').position().top,
-    //         socialise_distance = $('#socialise').position().top,
-    //         code_distance = $('#code').position().top,
-    //         $window = $(window);
-
-    //     $window.scroll(function() {
-    //         learn_distance = $('#learn').position().top,
-    //         socialise_distance = $('#socialise').position().top,
-    //         code_distance = $('#code').position().top
-    //         if ( $window.scrollTop() >= learn_distance ) {
-    //             $('#learn').addClass('fixed')
-    //         } else {
-    //             $('#learn').removeClass('fixed')
-    //         }
-    //         if ( $window.scrollTop() >= socialise_distance ) {
-    //             $('#socialise').addClass('fixed')
-    //         } else {
-    //             $('#socialise').removeClass('fixed')
-    //         }
-    //         if ( $window.scrollTop() >= code_distance ) {
-    //             $('#code').addClass('fixed')
-    //         } else {
-    //             $('#code').removeClass('fixed')
-    //         }
-    //     });
-    if (!localStorage.getItem('csclub.org.au_visited')) {
-        $("#tagline").typed({
-            strings: [
-                "Workshops", 
-                "Social events", 
-                "Studying", 
-                'Computer Science Club<br><span class="typed-button">SIGN UP</span>'
-            ],
-            contentType: 'html',
-            typeSpeed: 100,
-            backSpeed: 50,
-            backDelay: 500,
-            callback: function(){ typedCallback(); }
-        });
-    } else {
-        $('#tagline').html('Computer Science Club<br><span class="typed-button waves-effect waves-light btn flow-text">SIGN UP</span>');
-    }
+    });
+    $(window).on('load', function() {
+        if (!localStorage.getItem('csclub.org.au_visited')) {
+            $("#tagline").typed({
+                strings: [
+                    "Workshops", 
+                    "Social events", 
+                    "Studying", 
+                    'Computer Science Club<br><span class="typed-button">JOIN TODAY</span>'
+                ],
+                contentType: 'html',
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 500,
+                callback: function(){ typedCallback(); }
+            });
+        } else {
+            $('#tagline').html('Computer Science Club<br><span class="typed-button waves-effect waves-light btn">JOIN TODAY</span>');
+        }
     });
     function typedCallback() {
         console.log('Callback');
         $('.typed-cursor').addClass('invisible');
-        $('.typed-button').addClass('waves-effect waves-light btn flow-text');
+        $('.typed-button').addClass('waves-effect waves-light btn');
         localStorage.setItem('csclub.org.au_visited', true);        
     }
     $(document).on('keydown', function(e) {
