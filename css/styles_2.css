@@ -16,6 +16,21 @@ h1 {
   margin-bottom: 20px;
 }
 
+ul.dot-points {
+  list-style: disc;
+  padding-left: 20px;
+}
+ul.dot-points li {
+  list-style: disc;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -72px;
+  visibility: hidden;
+}
+
 header {
   background-image: url('../images/header_bg.jpg');
   background-size: cover;
@@ -44,6 +59,17 @@ header .container {
   padding: 10px;
   display: inline;
   position: absolute;
+}
+
+.material-icons.heading-icon,
+.fa.heading-icon {
+  vertical-align: bottom;
+  font-size: inherit;
+  width: 3rem;
+}
+
+form ul {
+  padding-left: 1rem;
 }
 
 ul.side-nav li.logo {
@@ -284,22 +310,79 @@ footer a:hover {
   font-size: 120%;
 }
 
+.card .card-header {
+  position: relative;
+  background-color: inherit;
+  border-bottom: 1px solid rgba(160,160,160,0.2);
+  padding: 20px;
+}
+.card .card-section {
+  /*border-bottom: 1px solid rgba(160,160,160,0.2);*/
+}
+.card .card-section .card-section-header {
+  background-color: #eee;
+  color: #313d4c;
+  padding: 15px 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-bottom: 1px solid rgba(160,160,160,0.2);
+  border-top: 1px solid rgba(160,160,160,0.2);
+}
+.card .card-section:first-child .card-section-header {
+  border-top: none;
+}
+
+.card .card-section .card-section-header h4 {
+  margin: 0;
+}
+
+.input-field .prefix {
+  line-height: inherit;
+}
 
 .input-field.inline {
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
 }
-.input-field.inline.inline-radio {
+.input-field.inline.inline-radio,
+.input-field.inline.inline-checkbox {
   margin: 0;
   vertical-align: baseline;
   margin-left: 5px;
 }
-.input-field.inline.inline-radio input {
+.input-field.inline.inline-radio input,
+.input-field.inline.inline-checkbox input {
   height: 1.5rem;
   margin: 0;
 }
 
+.row.degree-options .col p:last-child {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) input,
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) textarea,
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) label,
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) .validate ~ label,
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) .autocomplete-content {
+    margin-left: 3rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+  }
+
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) label {
+    margin-left: 3rem;
+  }
+  .input-group .input-field.prefixed ~ .input-field:not(.prefixed) input {
+    width: 80%;
+    width: calc(100% - 3rem);
+  }
+}
+
+
+/* SECTIONS */
 @media only screen and (min-width: 360px) {
   .section h1 {
     font-size: 3rem;
