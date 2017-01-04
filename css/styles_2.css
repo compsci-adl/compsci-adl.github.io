@@ -31,6 +31,10 @@ ul.dot-points li {
   visibility: hidden;
 }
 
+.pad-bottom {
+  padding-bottom: 1em;
+}
+
 header {
   background-image: url('../images/header_bg.jpg');
   background-size: cover;
@@ -208,6 +212,11 @@ nav {
 #code h1::before {
   content: '\f121';
 }
+
+#join h1 {
+  color: #313d4c;
+}
+
 #learn .section-footer {
   background-color: #1BB8D1;
   padding: 1rem 0
@@ -219,6 +228,10 @@ nav {
 #code .section-footer {
   background-color: #E71A64;
   padding: 1rem 0
+}
+
+.committee-members .card-title {
+  line-height: 1.5 !important;
 }
 
 .search-wrapper {
@@ -345,6 +358,13 @@ footer a:hover {
   vertical-align: middle;
   margin-left: 5px;
 }
+
+@media only screen and (min-width: 420px) {
+  .input-field.inline input[type="text"] {
+    width: 250px;
+  }
+}
+
 .input-field.inline.inline-radio,
 .input-field.inline.inline-checkbox {
   margin: 0;

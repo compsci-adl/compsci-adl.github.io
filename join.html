@@ -81,8 +81,11 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis.
+                    <p class="flow-text">
+                        New members are always welcome! Enter your details in the form below to register as a member.
+                    </p>
+                    <p class="flow-text">
+                        <strong>Membership costs $5.</strong> You can pay for membership at a club event or contact one of the <a href="about.html#committee">commitee members</a>. Currently we can only receive cash, apologies for any inconvenience.
                     </p>
                 </div>
             </div>
@@ -108,16 +111,22 @@
                             </div>
                         </div>
                         <div class="row">
-                        <div class="input-field col s12 m12 l6">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
+                            <div class="input-field col s12 m12 l6">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
                         </div>
                     </div>
 
                     <div class="card-section">
                         <div class="card-section-header">
                             <h4><i class="material-icons heading-icon">school</i>University</h4>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m2">
+                                <input id="student_no" type="text" class="validate">
+                                <label for="student_no">Student No.</label>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col s12">
@@ -204,7 +213,7 @@
                         <div class="row">
                             <div class="col s12">
                                 <h5>What sort of events would you be interested in?</h5>
-                                <ul class="availability-options">
+                                <ul class="event-options">
                                     <li>
                                         <input type="checkbox" class="filled-in" id="social" />
                                         <label for="social">Social</label>
@@ -336,6 +345,21 @@
         $(".degree-options input#degree6").on('click', function() {
             if ($(this).is(':checked')) {
                 $(".degree-options input#other_degree").focus();
+            }
+        });
+
+        $(".event-options input#other_event_check").on('click', function() {
+            if ($(this).is(':checked')) {
+                $(".event-options input#other_event").focus();
+            }
+        });
+        
+        $("#year").on('change', function() {
+            if ($(this).val() < 1) {
+                $(this).val(1);
+            }
+            else if ($(this).val() > 8) {
+                $(this).val(8);
             }
         });
 
