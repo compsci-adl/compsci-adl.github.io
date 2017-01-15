@@ -11,6 +11,19 @@ html, body {
     height: 100%;
 }
 
+.cs-dark {
+  color: #313d4c;
+}
+.cs-blue {
+  color: #1BB8D1;
+}
+.cs-yellow {
+  color: #FCC018;
+}
+.cs-pink {
+  color: #E71A64;
+}
+
 h1 {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -349,6 +362,15 @@ footer a:hover {
   margin: 0;
 }
 
+.toast {
+  -webkit-justify-content: initial;
+  -ms-flex-pack: justify;
+  justify-content: initial;
+}
+.toast .material-icons {
+  margin-right: 0.82rem;
+}
+
 .input-field .prefix {
   line-height: inherit;
 }
@@ -357,6 +379,37 @@ footer a:hover {
   display: inline-block;
   vertical-align: middle;
   margin-left: 5px;
+}
+
+#loading {
+  padding-left: 15px;
+}
+#loading > .preloader-wrapper {
+  vertical-align: middle;
+}
+
+.required-section::after {
+  content: "*";
+  color: #E71A64;
+  padding-left: 0.5rem;
+}
+
+.invalid-bg {
+  background-color: #fff1f1;
+  padding: 1rem;
+}
+
+#join-form .card .card-content .card-section .row {
+  margin-top: 0.82rem;
+}
+#join-form .card .card-content .card-section .row h5 {
+  margin-top: 0;
+}
+#join-form .card .card-content .card-section .row ~ .row {
+  margin-top: 0;
+}
+#join-form .card .card-content .card-section .row ~ .row h5 {
+  margin-top: 0.82rem;
 }
 
 @media only screen and (min-width: 420px) {
