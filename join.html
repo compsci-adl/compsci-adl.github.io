@@ -413,10 +413,8 @@
             type: "POST",
             data: {
               form_data: form_data,
-              recaptcha_data: {
-                secret: "6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b",
-                response: results["response_token"]
-              }
+              recaptcha_secret: "6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b",
+              // recaptcha_response: results["response_token"]
             },
             success: function(data) {
               Materialize.toast('<i class="material-icons">done</i>reCAPTCHA verified!.', 8000);
