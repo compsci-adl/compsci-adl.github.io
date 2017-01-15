@@ -405,48 +405,24 @@
         } else {
           Materialize.toast('<i class="material-icons">done</i>Looks good.', 4000)
           $(".toast").addClass("green");
-          console.log($("#join-form").serialize());
-          // $("input.validate").each(function (index, element) { if ($(element).is(".invalid")) { console.log(element); } });
-          // $("input, textarea").prop("disabled", true);
-          // $("#loading").removeClass("hide");
+          var form_data = $("#join-form").serialize();
 
-          // Get data
-          // var degree = $("input[name=degree][type=radio]:checked").val();
-          // var availability = []; 
-          // var events = [];
-          // if (degree == "Other") {
-          //   degree = $("#degree6").val();
-          // }
-
-
-          // var form_data = {
-          //   first_name: $("#first_name").val(),
-          //   last_name: $("#last_name").val(),
-          //   email: $("#email").val(),
-          //   student_no: $("#student_no").val(),
-          //   degree: $("#degree").val(),
-          //   year: ,
-          //   availability: ,
-          //   events: ,
-          //   slack_invite: ,
-          //   comments: ,
-          // };
-
-          // Confirm reCaptcha response token
-          // $.ajax({
-          //   url: "https://script.google.com/macros/s/AKfycbxwTwNmDQ3mQI1A-HOXDbrMjp611kcKWwfPh_rxsFs4_tIBxgqU/exec",
-          //   type: "POST",
-          //   data: {
-          //     form_data: form_data,
-          //     recaptcha_data: {
-          //       secret: "6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b",
-          //       response: results["response_token"]
-          //     }
-          //   },
-          //   success: function(data) {
-          //     Materialize.toast('<i class="material-icons">done</i>reCAPTCHA verified!.', 8000);
-          //   }
-          // });
+          // Send request
+          $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbxwTwNmDQ3mQI1A-HOXDbrMjp611kcKWwfPh_rxsFs4_tIBxgqU/exec",
+            type: "POST",
+            data: {
+              form_data: form_data,
+              recaptcha_data: {
+                secret: "6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b",
+                response: results["response_token"]
+              }
+            },
+            success: function(data) {
+              Materialize.toast('<i class="material-icons">done</i>reCAPTCHA verified!.', 8000);
+              console.log(data);
+            }
+          });
         }
       });
 
