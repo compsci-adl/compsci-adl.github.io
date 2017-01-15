@@ -384,10 +384,10 @@
         console.log("Validating form:");
         $("#join-form input").removeClass("invalid");
         $("#join-form ul").removeClass("invalid-bg");
-        var errors = validateForm();
+        var results = validateForm();
         var scroll_to = 99999999;
-        if (errors.length > 0) {
-          errors.each(function (index, value) {
+        if (results["errors"].length > 0) {
+          results["errors"].each(function (index, value) {
             if ($(value).prop("tagName") == "INPUT") {
               $(value).addClass('invalid');
             } else {
@@ -399,8 +399,8 @@
           });
           $("html, body").animate({
             scrollTop: scroll_to - 200
-          }, 800 / ($(errors[0]).offset().top / 500));
-          Materialize.toast('<i class="material-icons">report_problem</i>Please fill out all required sections.', 8000)
+          }, 800 / ($(results["errors"][0]).offset().top / 500));
+          Materialize.toast('<i class="material-icons">report_problem</i>Please fill out all required sections.', 8000);
           $(".toast").addClass("pink");
         } else {
           Materialize.toast('<i class="material-icons">done</i>Looks good.', 4000)
@@ -408,14 +408,28 @@
           $("input.validate").each(function (index, element) { if ($(element).is(".invalid")) { console.log(element); } });
           $("input, textarea").prop("disabled", true);
           $("#loading").removeClass("hide");
+
+          // Confirm reCaptcha response token
+          $.ajax({
+            url: "https://www.google.com/recaptcha/api/siteverify",
+            type: "POST",
+            data: {
+              secret: "6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b",
+              response: results["response_token"]
+            },
+            success: function(data) {
+              Materialize.toast('<i class="material-icons">done</i>reCAPTCHA verified!.', 8000);
+            }
+          });
         }
       });
 
       /*
       * Validates all parts of the join form
-      * @return {Array} An array of errors. Empty array if form is valid.
+      * @return {Object} An object containing "errors" and "response_token".
       */
       function validateForm() {
+        var results = {};
         var required_fields = $("input[required]").filter(function (index, element) {
           return $.trim($(this).val()).length == 0;
         });
@@ -442,10 +456,16 @@
           required_fields.push($(".slack-options")[0]);
         }
 
-        console.log("Required fields:");
-        console.log(required_fields);
-        // $('input[name="availability[]"]:checked')
-        return required_fields;
+        var captcha_response = grecaptcha.getResponse();
+        if(captcha_response.length == 0) {
+          // Captcha is not Passed
+          required_fields.push($(".g-recaptcha")[0]);
+        }
+
+        results["errors"] = required_fields;
+        results["response_token"] = captcha_response;
+
+        return results;
       }
     });
   </script>
