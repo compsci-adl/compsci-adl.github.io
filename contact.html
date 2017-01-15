@@ -206,20 +206,6 @@
                 $(".event-options input#other_event").focus();
             }
         });
-
-        // Nav logo fade in/out
-        var topofDiv = $("#header-logo").offset().top; //gets offset of #header-logo
-        var height = $("#header-logo").outerHeight(); //gets height of #header-logo
-        $(window).scroll(function(){
-            if($(window).scrollTop() > (topofDiv + height)){
-            $("#logo").stop().fadeIn({duration:400});
-            $(".brand-logo").addClass('with-logo');
-            }
-            else{
-            $("#logo").stop().fadeOut({duration:400});
-            $(".brand-logo").removeClass('with-logo');
-            }
-        });
       });
     </script>
 </body>
