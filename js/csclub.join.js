@@ -53,6 +53,7 @@ $(document).ready(function () {
     // If validation fails
     if (results["gcaptcha_token"] === 0) {
       Materialize.toast("<i class='material-icons'>report_problem</i>Please prove you're not a robot.", 8000, 'pink');
+      $("#submit").attr("disabled", false);
     } else if (results["errors"].length > 0) {
       results["errors"].each(function (index, value) {
         if ($(value).prop("tagName") == "INPUT") {
