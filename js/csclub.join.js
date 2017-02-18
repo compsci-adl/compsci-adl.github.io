@@ -51,7 +51,7 @@ $(document).ready(function () {
     var results = validateForm();
     var scroll_to = Number.MAX_SAFE_INTEGER;
     // If validation fails
-    if (results["response_code"] === 0) {
+    if (results["gcaptcha_token"] === 0) {
       Materialize.toast("<i class='material-icons'>report_problem</i>Please prove you're not a robot.", 8000, 'pink');
     } else if (results["errors"].length > 0) {
       results["errors"].each(function (index, value) {
