@@ -146,14 +146,14 @@ $(document).ready(function () {
     }
 
     // var captcha_response = grecaptcha.getResponse();
-    // if(captcha_response.length == 0) {
-    //   // Captcha is not Passed
-    //   required_fields.push($(".g-recaptcha")[0]);
-    // }
+    if(captcha_response.length == 0) {
+      // Captcha is not Passed
+      required_fields.push($(".g-recaptcha")[0]);
+    }
 
     results["errors"] = required_fields;
-    // results["response_token"] = captcha_response;
-    results["response_token"] = 0;
+    results["response_token"] = captcha_response;
+    // results["response_token"] = 0;
 
     return results;
   }
