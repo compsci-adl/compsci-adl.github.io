@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://csclub.org.au/contact" />
 
-    <title>CS Club | University of Adelaide Computer Science Club</title>
-    <!-- Bootstrap -->
+    <title>CS Club | Contact</title>
+    <!-- Materialize -->
     <link href="css/materialize.min.css" rel="stylesheet">
     <!-- General stylesheet -->
     <link href="css/styles_2.css" rel="stylesheet">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,58 +27,53 @@
     <![endif]-->
 </head>
 
-<body>
-    <!-- Code goes here -->
+<body class="contact">
     <div class="navbar-fixed">
-    <nav>
-        <div class="container nav-wrapper">
-            <!--<a href="#" class="brand-logo">Computer Science Club</a>-->
-            <!--<a href="#" class="brand-logo hide-on-large-only">CS Club</a>-->
-            <img id="logo" src="images/logo_sm.png" height="100%">
-            <a href="#" class="brand-logo with-logo">CS Club</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="index2.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li class="active"><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
-        </div>
-    </nav>
+        <nav>
+            <div class="container nav-wrapper">
+                <img id="logo" src="images/logo_sm.png" height="100%">
+                <a href="#" class="brand-logo with-logo">CS Club</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="//csclub.org.au">Home</a></li>
+                    <li><a href="//csclub.org.au/about">About</a></li>
+                    <li><a href="//csclub.org.au/join">Join</a></li>
+                    <li class="active"><a href="//csclub.org.au/contact">Contact</a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
+            </div>
+        </nav>
     </div>
 
     <ul id="slide-out" class="side-nav">
         <li class="logo">
-            <a id="logo-container" href="#" class="brand-logo">                        
+            <a id="logo-container" href="//csclub.org.au" class="brand-logo">
                 <img src="images/logo.png" height="100%">
             </a>
         </li>
         <li class="search">
-          <div class="search-wrapper card">
-            <input id="search" placeholder="Search"><i class="material-icons">search</i>
-          </div>
+            <div class="search-wrapper card">
+                <input id="search" placeholder="Search"><i class="material-icons">search</i>
+            </div>
         </li>
-        <li><a href="index2.html"><i class="material-icons">home</i>Home</a></li>
-        <li><a href="about.html"><i class="material-icons">info</i>About</a></li>
-        <li><a href="join.html"><i class="material-icons">person_add</i>Join</a></li>
-        <li class="active"><a href="contact.html"><i class="material-icons">email</i>Contact</a></li>
+        <li><a href="//csclub.org.au"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="//csclub.org.au/about"><i class="material-icons">info</i>About</a></li>
+        <li><a href="//csclub.org.au/join"><i class="material-icons">person_add</i>Join</a></li>
+        <li class="active"><a href="//csclub.org.au/contact"><i class="material-icons">email</i>Contact</a></li>
     </ul>
-
-    <div id="header-fill"></div>
 
     <header>
         <div class="container">
             <div class="row">
                 <div class="col s12">
                     <h1 class="center">
-                      Contact
+                        Contact
                     </h1>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="section">
+    <main class="section">
         <div class="container">
             <div class="row">
                 <div class="col s12">
@@ -86,57 +82,53 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
-              <form class="col s12">
-                <div class="card">
-                  <div class="card-header">
-                    <span class="card-title">Contact us</span>
-                  </div>
-                  <div class="card-content" style="padding-top:0;">
-                    <div class="row">
-                        <div class="input-field col s12 m6">
-                            <input id="first_name" name="first_name" type="text" class="validate">
-                            <label for="first_name">First Name</label>
-                        </div>
-                        <div class="input-field col s12 m6">
-                            <input id="last_name" name="last_name" type="text" class="validate">
-                            <label for="last_name">Last Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 m12 l6">
-                            <input id="email" name="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 m12 l6">
-                            <hidden id="subject" name="subject" type="text">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="message" name="message" class="materialize-textarea"></textarea>
-                            <label for="message">Message</label>
-                        </div>
-                    </div>
-                  </div>
+            <div class="row form-row">
+                <form id="contact-form">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">Contact us</span>
+                            </div>
+                            <div class="card-content">
+                                <div class="cs-pink">*Required</div>
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <input id="first_name" name="first_name" type="text" class="validate" required>
+                                        <label for="first_name" class="required">First Name</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="last_name" name="last_name" type="text" class="validate" required>
+                                        <label for="last_name" class="required">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l6">
+                                        <input id="email" name="email" type="email" class="validate" required>
+                                        <label for="email" class="required">Email</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l6">
+                                        <hidden id="subject" name="subject" type="text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                                        <label for="message" class="required">Message</label>
+                                    </div>
+                                </div>
+                            </div>
 
-                  <div class="card-action">
-                      <a class="waves-effect waves-light btn-large" href="#">Send</a>
-                  </div>
-                </div>
-              </form>
+                            <div class="card-action">
+                                <input id="contact-submit" class="btn-large" type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="section-footer container-full">
-            <div class="container">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis.
-                </p>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer>
         <div class="container">
@@ -147,20 +139,21 @@
                         The University of Adelaide
                     </p>
                     <p>
-                        <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Join</a> | <a href="#">Contact</a>
+                        <a href="//csclub.org.au">Home</a> | <a href="//csclub.org.au/about">About</a> | <a href="//csclub.org.au/join">Join</a>                        | <a href="//csclub.org.au/contact">Contact</a>
                     </p>
                 </div>
                 <div class="col s12 m4">
                     <div class="search-wrapper card">
                         <input class="search" placeholder="Search">
                         <i class="material-icons">search</i>
+                        <div class="search-results card"></div>
                     </div>
                     <div>
                         Connect with us<br>
                         <span class="social-icons">
-                            <a href="#"><i class="fa fa-facebook-official"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-github"></i></a>
+                            <a href="https://www.facebook.com/compsci.adl/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                            <a href="https://twitter.com/CompSciAdl" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://github.com/compsci-adl" target="_blank"><i class="fa fa-github"></i></a>
                         </span>
                     </div>
                 </div>
@@ -170,44 +163,21 @@
                     <p>
                         &copy; 2017 Computer Science Club. All rights reserved.
                     </p>
-                </div>            
-            </div>            
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/materialize.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- JS plugins and individual files -->
+    <script src="js/csclub.materialize-v1.0.js"></script>
+    <script src="js/lunr.min.js"></script>
+    <script src="js/search.js"></script>
+    <!-- CS Club js -->
+    <script src="js/csclub.common.js"></script>
+    <script src="js/csclub.contact.js"></script>
 
-    <script>
-    $( document ).ready(function() {
-        $(".button-collapse").sideNav();
-
-        $(".availability-options input#none").on('change', function() {
-            if ($(this).prop('checked')) {
-                $(".availability-options input:not(#none)").prop('checked', false);
-            }
-        });
-        $(".availability-options input:not(#none)").on('change', function() {
-            if (($(this).prop('checked')) && ($(".availability-options input#none").prop('checked'))) {
-                $(".availability-options input#none").prop('checked', false);
-            }
-        });
-
-        $(".degree-options input#degree6").on('click', function() {
-            if ($(this).is(':checked')) {
-                $(".degree-options input#other_degree").focus();
-            }
-        });
-
-        $(".event-options input#other_event_check").on('click', function() {
-            if ($(this).is(':checked')) {
-                $(".event-options input#other_event").focus();
-            }
-        });
-      });
-    </script>
 </body>
 
 </html>

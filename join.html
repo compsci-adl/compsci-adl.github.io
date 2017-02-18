@@ -6,9 +6,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://csclub.org.au/join" />
 
-  <title>CS Club | University of Adelaide Computer Science Club</title>
-  <!-- Bootstrap -->
+  <title>CS Club | Join</title>
+  <!-- Materialize -->
   <link href="css/materialize.min.css" rel="stylesheet">
   <!-- General stylesheet -->
   <link href="css/styles_2.css" rel="stylesheet">
@@ -29,20 +30,17 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
-<body>
-  <!-- Code goes here -->
+<body class="join">
   <div class="navbar-fixed">
     <nav>
       <div class="container nav-wrapper">
-        <!--<a href="#" class="brand-logo">Computer Science Club</a>-->
-        <!--<a href="#" class="brand-logo hide-on-large-only">CS Club</a>-->
         <img id="logo" src="images/logo_sm.png" height="100%">
         <a href="#" class="brand-logo with-logo">CS Club</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="index2.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="active"><a href="join.html">Join</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="//csclub.org.au">Home</a></li>
+          <li><a href="//csclub.org.au/about">About</a></li>
+          <li class="active"><a href="//csclub.org.au/join">Join</a></li>
+          <li><a href="//csclub.org.au/contact">Contact</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
       </div>
@@ -51,22 +49,21 @@
 
   <ul id="slide-out" class="side-nav">
     <li class="logo">
-      <a id="logo-container" href="#" class="brand-logo">
+      <a id="logo-container" href="//csclub.org.au" class="brand-logo">
         <img src="images/logo.png" height="100%">
       </a>
     </li>
     <li class="search">
       <div class="search-wrapper card">
-        <input id="search" placeholder="Search"><i class="material-icons">search</i>
+        <input class="search" placeholder="Search"><i class="material-icons">search</i>
+        <div class="search-results"></div>
       </div>
     </li>
-    <li><a href="index2.html"><i class="material-icons">home</i>Home</a></li>
-    <li><a href="about.html"><i class="material-icons">info</i>About</a></li>
-    <li class="active"><a href="join.html"><i class="material-icons">person_add</i>Join</a></li>
-    <li><a href="contact.html"><i class="material-icons">email</i>Contact</a></li>
+    <li><a href="//csclub.org.au"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="//csclub.org.au/about"><i class="material-icons">info</i>About</a></li>
+    <li class="active"><a href="//csclub.org.au/join"><i class="material-icons">person_add</i>Join</a></li>
+    <li><a href="//csclub.org.au/contact"><i class="material-icons">email</i>Contact</a></li>
   </ul>
-
-  <div id="header-fill"></div>
 
   <header>
     <div class="container">
@@ -80,232 +77,229 @@
     </div>
   </header>
 
-  <div class="section">
+  <main class="section">
+    <div class="section-header container-full flow-text">
+      <div class="container">
+        <p>
+          New members are always welcome! Enter your details in the form below to register as a member.
+        </p>
+        <p>
+          <strong>Membership costs $5.</strong> You can pay for membership at a club event or contact one of the <a href="//csclub.org.au/about#committee">committee members</a>.
+          Currently we can only receive cash, apologies for any inconvenience.
+        </p>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
-        <div class="col s12">
-          <p class="flow-text">
-            New members are always welcome! Enter your details in the form below to register as a member.
-          </p>
-          <p class="flow-text">
-            <strong>Membership costs $5.</strong> You can pay for membership at a club event or contact one of the <a href="about.html#committee">commitee members</a>.
-            Currently we can only receive cash, apologies for any inconvenience.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <form id="join-form" class="col s12" action=""
-          method="POST">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">Membership Registration</div>
-              <div class="cs-pink">*Required</div>
-            </div>
-            <div class="card-content" style="padding-top:0;">
-              <div class="card-section">
-                <div class="card-section-header">
-                  <h4 class="required-section"><i class="material-icons heading-icon">perm_identity</i>Your details</h4>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12 m6">
-                    <input name="first_name" id="first_name" type="text" class="validate" required>
-                    <label for="first_name">First Name</label>
-                  </div>
-                  <div class="input-field col s12 m6">
-                    <input name="last_name" id="last_name" type="text" class="validate" required>
-                    <label for="last_name">Last Name</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12 m12 l6">
-                    <input name="email" id="email" type="email" class="validate" required>
-                    <label for="email">Email</label>
-                  </div>
-                </div>
+        <form id="join-form" action="" method="POST">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Membership Registration</div>
+                <div class="cs-pink">*Required</div>
               </div>
-
-              <div class="card-section">
-                <div class="card-section-header">
-                  <h4 class="required-section"><i class="material-icons heading-icon">school</i>University</h4>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12 m2">
-                    <input name="student_no" id="student_no" type="text" class="validate" required placeholder="a1234567">
-                    <label for="student_no">Student No.</label>
+              <div class="card-content" style="padding-top:0;">
+                <div class="card-section">
+                  <div class="card-section-header">
+                    <h4 class="required-section"><i class="material-icons heading-icon">perm_identity</i>Your details</h4>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 m6">
+                      <input name="first_name" id="first_name" type="text" class="validate" required>
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                      <input name="last_name" id="last_name" type="text" class="validate" required>
+                      <label for="last_name">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 m12 l6">
+                      <input name="email" id="email" type="email" class="validate" required>
+                      <label for="email">Email</label>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col s12">
-                    <h5>What degree are you studying?</h5>
-                    <ul class="degree-options">
-                      <li>
-                        <input name="degree" id="degree1" type="radio" value="Computer Science" />
-                        <label for="degree1">Computer Science</label>
-                      </li>
-                      <li>
-                        <input name="degree" id="degree2" type="radio" value="Computer Science (Advanced)" />
-                        <label for="degree2">Computer Science (Advanced)</label>
-                      </li>
-                      <li>
-                        <input name="degree" id="degree3" type="radio" value="Software Engineering" />
-                        <label for="degree3">Software Engineering</label>
-                      </li>
-                      <li>
-                        <input name="degree" id="degree4" type="radio" value="Electrical Engineering" />
-                        <label for="degree4">Electrical Engineering</label>
-                      </li>
-                      <li>
-                        <input name="degree" id="degree5" type="radio" value="Computer Systems Engineering" />
-                        <label for="degree5">Computer Systems Engineering</label>
-                      </li>
-                      <li>
-                        <input name="degree" id="other_degree" type="radio" value="other" />
-                        <label for="other_degree">
+
+                <div class="card-section">
+                  <div class="card-section-header">
+                    <h4 class="required-section"><i class="material-icons heading-icon">school</i>University</h4>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 m2">
+                      <input name="student_no" id="student_no" type="text" class="validate" required placeholder="a1234567">
+                      <label for="student_no">Student No.</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <h5>What degree are you studying?</h5>
+                      <ul class="degree-options">
+                        <li>
+                          <input name="degree" id="degree1" type="radio" value="Computer Science" />
+                          <label for="degree1">Computer Science</label>
+                        </li>
+                        <li>
+                          <input name="degree" id="degree2" type="radio" value="Computer Science (Advanced)" />
+                          <label for="degree2">Computer Science (Advanced)</label>
+                        </li>
+                        <li>
+                          <input name="degree" id="degree3" type="radio" value="Software Engineering" />
+                          <label for="degree3">Software Engineering</label>
+                        </li>
+                        <li>
+                          <input name="degree" id="degree4" type="radio" value="Electrical Engineering" />
+                          <label for="degree4">Electrical Engineering</label>
+                        </li>
+                        <li>
+                          <input name="degree" id="degree5" type="radio" value="Computer Systems Engineering" />
+                          <label for="degree5">Computer Systems Engineering</label>
+                        </li>
+                        <li>
+                          <input name="degree" id="other_degree" type="radio" value="other" />
+                          <label for="other_degree">
+                              Other:
+                              <span class="input-field inline inline-radio">
+                                  <input name="degree" id="degree6" placeholder="Please specify" type="text" class="validate">
+                              </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <h5>What year are you in?</h5>
+                      <div class="input-field col s6 m3">
+                        <input name="year" id="year" type="number" class="validate" required min="1" max="8" step="1" />
+                        <label for="year">Year</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-section">
+                  <div class="card-section-header">
+                    <h4 class="required-section"><i class="material-icons heading-icon">event</i>Social &amp; Events</h4>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <h5>What nights would you be available for social events?</h5>
+                      <ul class="availability-options">
+                        <li>
+                          <input name="availability" id="monday" type="checkbox" class="filled-in" value="monday" />
+                          <label for="monday">Monday</label>
+                        </li>
+                        <li>
+                          <input name="availability" id="tuesday" type="checkbox" class="filled-in" value="tuesday" />
+                          <label for="tuesday">Tuesday</label>
+                        </li>
+                        <li>
+                          <input name="availability" id="wednesday" type="checkbox" class="filled-in" value="wednesday" />
+                          <label for="wednesday">Wednesday</label>
+                        </li>
+                        <li>
+                          <input name="availability" id="thursday" type="checkbox" class="filled-in" value="thursday" />
+                          <label for="thursday">Thursday</label>
+                        </li>
+                        <li>
+                          <input name="availability" id="friday" type="checkbox" class="filled-in" value="friday" />
+                          <label for="friday">Friday</label>
+                        </li>
+                        <li>
+                          <input name="availability" id="none" type="checkbox" class="filled-in" value="none" />
+                          <label for="none">None <i class="material-icons" style="vertical-align:text-bottom;font-size:20px;">sentiment_very_dissatisfied</i></label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col s12">
+                      <h5>What sort of events would you be interested in?</h5>
+                      <ul class="event-options">
+                        <li>
+                          <input name="events" id="social" type="checkbox" class="filled-in" value="social" />
+                          <label for="social">Social</label>
+                        </li>
+                        <li>
+                          <input name="events" id="educational" type="checkbox" class="filled-in" value="educational" />
+                          <label for="educational">Educational</label>
+                        </li>
+                        <li>
+                          <input name="events" id="other_event_check" type="checkbox" class="filled-in" value="other" />
+                          <label for="other_event_check">
                             Other:
-                            <span class="input-field inline inline-radio">
-                                <input name="degree" id="degree6" placeholder="Please specify" type="text" class="validate">
+                            <span class="input-field inline inline-checkbox">
+                              <input name="events" id="other_event" placeholder="Please specify" type="text" class="validate" />
                             </span>
-                        </label>
-                      </li>
-                    </ul>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col s12">
-                    <h5>What year are you in?</h5>
-                    <div class="input-field col s6 m3">
-                      <input name="year" id="year" type="number" class="validate" required min="1" max="8" step="1" />
-                      <label for="year">Year</label>
+
+                  <div class="row">
+                    <div class="col s12">
+                      <h5>Would you like an invite to the
+                        <a href="//csclub.org.au/about#slack" class="tooltipped" data-position="bottom" data-delay="100" data-tooltip="Our chatroom for members. Click for more information.">CS Club Slack</a>?</h5>
+                      <ul class="slack-options">
+                        <li>
+                          <input name="slack_invite" type="radio" id="slack_yes" value="yes" />
+                          <label for="slack_yes">Yes</label>
+                        </li>
+                        <li>
+                          <input name="slack_invite" type="radio" id="slack_no" value="no" />
+                          <label for="slack_no">No</label>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+
+                <div class="card-section">
+                  <div class="card-section-header">
+                    <h4><i class="material-icons heading-icon">feedback</i>Feedback</h4>
+                  </div>
+                  <div class="row">
+                    <div class="col s12">
+                      <h5>Any suggestions / feedback / comments?</h5>
+                      <div class="input-field">
+                        <textarea name="comments" id="comments" class="materialize-textarea"></textarea>
+                        <label for="comments">Your answer</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="g-recaptcha" data-sitekey="6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b"></div>
+
               </div>
 
-              <div class="card-section">
-                <div class="card-section-header">
-                  <h4 class="required-section"><i class="material-icons heading-icon">event</i>Social &amp; Events</h4>
-                </div>
-                <div class="row">
-                  <div class="col s12">
-                    <h5>What nights would you be available for social events?</h5>
-                    <ul class="availability-options">
-                      <li>
-                        <input name="availability" id="monday" type="checkbox" class="filled-in" value="monday" />
-                        <label for="monday">Monday</label>
-                      </li>
-                      <li>
-                        <input name="availability" id="tuesday" type="checkbox" class="filled-in" value="tuesday" />
-                        <label for="tuesday">Tuesday</label>
-                      </li>
-                      <li>
-                        <input name="availability" id="wednesday" type="checkbox" class="filled-in" value="wednesday" />
-                        <label for="wednesday">Wednesday</label>
-                      </li>
-                      <li>
-                        <input name="availability" id="thursday" type="checkbox" class="filled-in" value="thursday" />
-                        <label for="thursday">Thursday</label>
-                      </li>
-                      <li>
-                        <input name="availability" id="friday" type="checkbox" class="filled-in" value="friday" />
-                        <label for="friday">Friday</label>
-                      </li>
-                      <li>
-                        <input name="availability" id="none" type="checkbox" class="filled-in" value="none" />
-                        <label for="none">None <i class="material-icons" style="vertical-align:text-bottom;font-size:20px;">sentiment_very_dissatisfied</i></label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col s12">
-                    <h5>What sort of events would you be interested in?</h5>
-                    <ul class="event-options">
-                      <li>
-                        <input name="events" id="social" type="checkbox" class="filled-in" value="social" />
-                        <label for="social">Social</label>
-                      </li>
-                      <li>
-                        <input name="events" id="educational" type="checkbox" class="filled-in" value="educational" />
-                        <label for="educational">Educational</label>
-                      </li>
-                      <li>
-                        <input name="events" id="other_event_check" type="checkbox" class="filled-in" value="other" />
-                        <label for="other_event_check">
-                          Other:
-                          <span class="input-field inline inline-checkbox">
-                            <input name="events" id="other_event" placeholder="Please specify" type="text" class="validate" />
-                          </span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col s12">
-                    <h5>Would you like an invite to the <a href="about.html#slack" class="tooltipped" data-position="bottom" data-delay="100" data-tooltip="Our chatroom for members. Click for more information.">CS Club Slack</a>?</h5>
-                    <ul class="slack-options">
-                      <li>
-                        <input name="slack_invite" type="radio" id="slack_yes" value="yes" />
-                        <label for="slack_yes">Yes</label>
-                      </li>
-                      <li>
-                        <input name="slack_invite" type="radio" id="slack_no" value="no" />
-                        <label for="slack_no">No</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-section">
-                <div class="card-section-header">
-                  <h4><i class="material-icons heading-icon">feedback</i>Feedback</h4>
-                </div>
-                <div class="row">
-                  <div class="col s12">
-                    <h5>Any suggestions / feedback / comments?</h5>
-                    <div class="input-field">
-                      <textarea name="comments" id="comments" class="materialize-textarea"></textarea>
-                      <label for="comments">Your answer</label>
+              <div class="card-action">
+                <input id="submit" type="submit" class="btn-large" value="Join CS Club" />
+                <span id="loading" class="hide">
+                  <span class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-green-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div>
+                      <div class="gap-patch">
+                        <div class="circle"></div>
+                      </div>
+                      <div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="g-recaptcha" data-sitekey="6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b"></div>
-
-            </div>
-
-            <div class="card-action">
-              <input id="submit" type="submit" class="btn-large" value="Join CS Club" />
-              <span id="loading" class="hide">
-                <span class="preloader-wrapper small active">
-                  <div class="spinner-layer spinner-green-only">
-                    <div class="circle-clipper left">
-                      <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                      <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                      <div class="circle"></div>
-                    </div>
-                  </div>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
         </form>
       </div>
     </div>
-    <div class="section-footer container-full">
-      <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mi risus. Nulla dapibus finibus neque, vel vehicula ipsum pellentesque quis. Ut egestas at diam vel iaculis.</p>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <footer>
     <div class="container">
@@ -316,20 +310,21 @@
             The University of Adelaide
           </p>
           <p>
-            <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Join</a> | <a href="#">Contact</a>
+            <a href="//csclub.org.au">Home</a> | <a href="//csclub.org.au/about">About</a> | <a href="//csclub.org.au/join">Join</a>            | <a href="//csclub.org.au/contact">Contact</a>
           </p>
         </div>
         <div class="col s12 m4">
           <div class="search-wrapper card">
             <input class="search" placeholder="Search">
             <i class="material-icons">search</i>
+            <div class="search-results card"></div>
           </div>
           <div>
             Connect with us<br>
             <span class="social-icons">
-              <a href="#"><i class="fa fa-facebook-official"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="https://www.facebook.com/compsci.adl/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+              <a href="https://twitter.com/CompSciAdl" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://github.com/compsci-adl" target="_blank"><i class="fa fa-github"></i></a>
             </span>
           </div>
         </div>
@@ -344,155 +339,18 @@
     </div>
   </footer>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/materialize.js"></script>
+  <!-- jQuery -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <!-- JS plugins and individual files -->
+  <script src="js/csclub.materialize-v1.0.js"></script>
+  <script src="js/lunr.min.js"></script>
+  <script src="js/search.js"></script>
+  <!-- CS Club common js -->
+  <script src="js/csclub.common.js"></script>
+  <script src="js/csclub.join.js"></script>
 
   <script>
-    $(document).ready(function () {
-      $(".button-collapse").sideNav();
 
-      $(".availability-options input#none").on('change', function () {
-        if ($(this).prop('checked')) {
-          $(".availability-options input:not(#none)").prop('checked', false);
-        }
-      });
-      $(".availability-options input:not(#none)").on('change', function () {
-        if (($(this).prop('checked')) && ($(".availability-options input#none").prop('checked'))) {
-          $(".availability-options input#none").prop('checked', false);
-        }
-      });
-
-      $(".degree-options input#other_degree").on('click', function () {
-        if ($(this).is(':checked')) {
-          $(".degree-options input#degree6").focus();
-        }
-      });
-      $(".degree-options input#degree6").on('click', function () {
-        $(".degree-options input#other_degree").prop('checked', true);
-      });
-
-      $(".event-options input#other_event_check").on('click', function () {
-        if ($(this).is(':checked')) {
-          $(".event-options input#other_event").focus();
-        }
-      });
-
-      $("#submit").on("click", function (e) {
-        e.preventDefault();
-        console.log("Validating form:");
-        $("#join-form input").removeClass("invalid");
-        $("#join-form ul").removeClass("invalid-bg");
-        var results = validateForm();
-        var scroll_to = 99999999;
-        if (results["errors"].length > 0) {
-          results["errors"].each(function (index, value) {
-            if ($(value).prop("tagName") == "INPUT") {
-              $(value).addClass('invalid');
-            } else {
-              $(value).addClass('invalid-bg');
-            }
-            if ($(value).offset().top < scroll_to) {
-              scroll_to = $(value).offset().top;
-            }
-          });
-          $("html, body").animate({
-            scrollTop: scroll_to - 200
-          }, 800 / ($(results["errors"][0]).offset().top / 500));
-          Materialize.toast('<i class="material-icons">report_problem</i>Please fill out all required sections.', 8000);
-          $(".toast").addClass("pink");
-        } else {
-          Materialize.toast('<i class="material-icons">done</i>Looks good.', 4000)
-          $(".toast").addClass("green");
-          var form_data = formToJson(("#join-form"));
-          console.log(form_data);
-
-          // Send request
-          $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbxwTwNmDQ3mQI1A-HOXDbrMjp611kcKWwfPh_rxsFs4_tIBxgqU/exec",
-            type: "POST",
-            data: form_data,
-            success: function(data) {
-              Materialize.toast('<i class="material-icons">done</i>reCAPTCHA verified!.', 8000);
-              console.log(data);
-            }
-          });
-        }
-      });
-
-      /*
-      * Validates all parts of the join form
-      * @return {Object} An object containing "errors" and "response_token".
-      */
-      function validateForm() {
-        var results = {};
-        var required_fields = $("input[required]").filter(function (index, element) {
-          return $.trim($(this).val()).length == 0;
-        });
-
-        if ($("input[name=degree][type=radio]:checked").length == 0) {
-          required_fields.push($(".degree-options")[0]);
-        } else {
-          // Check if other is checked
-          if ($("input[name=degree][type=radio]:checked").val() == "other" && $.trim($("input[name=degree][type=text]").val()).length == 0) {
-            required_fields.push($("input#degree6")[0]);
-          }
-        }
-        if ($("input[name=availability][type=checkbox]:checked").length == 0) {
-          required_fields.push($(".availability-options")[0]);
-        }
-        if ($("input[name=events][type=checkbox]:checked").length == 0) {
-          required_fields.push($(".event-options")[0]);
-        } else {
-          if ($("#other_event_check").prop("checked") && $.trim($("input#other_event").val()).length == 0) {
-            required_fields.push($("input#other_event")[0]);
-          }
-        }
-        if ($("input[name=slack_invite][type=radio]:checked").length == 0) {
-          required_fields.push($(".slack-options")[0]);
-        }
-
-        // var captcha_response = grecaptcha.getResponse();
-        // if(captcha_response.length == 0) {
-        //   // Captcha is not Passed
-        //   required_fields.push($(".g-recaptcha")[0]);
-        // }
-
-        results["errors"] = required_fields;
-        // results["response_token"] = captcha_response;
-        results["response_token"] = 0;
-
-        return results;
-      }
-
-      function formToJson(form){
-        var array = $(form).serializeArray();
-        console.log(array);
-        var json = {};
-        
-        $.each(array, function() {
-          if (this.value !== 'other' ) {
-            if (json[this.name] !== undefined) {
-              if (!json[this.name].push) {
-                  json[this.name] = [json[this.name]];
-              }
-              json[this.name].push(this.value || '');
-            } else {
-              json[this.name] = this.value || '';
-            }
-          }
-        });
-
-        $.each(json, function(index, value) {
-          if (value.constructor === Array) {
-            json[index] = value.join();
-          }
-        });
-        
-        return json;
-      }
-    });
   </script>
 </body>
 

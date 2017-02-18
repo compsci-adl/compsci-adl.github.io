@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://csclub.org.au" />
 
     <title>CS Club | University of Adelaide Computer Science Club</title>
-    <!-- Bootstrap -->
+    <!-- Materialize -->
     <link href="css/materialize.min.css" rel="stylesheet">
     <!-- General stylesheet -->
     <link href="css/styles_2.css" rel="stylesheet">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,44 +27,40 @@
     <![endif]-->
 </head>
 
-<body>
-    <!-- Code goes here -->
+<body class="home">
     <div class="navbar-fixed">
-    <nav>
-        <div class="container nav-wrapper">
-            <!--<a href="#" class="brand-logo">Computer Science Club</a>-->
-            <!--<a href="#" class="brand-logo hide-on-large-only">CS Club</a>-->
-            <img id="logo" src="images/logo_sm.png" height="100%" style="display:none;">
-            <a href="#" class="brand-logo">CS Club</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a href="index2.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
-        </div>
-    </nav>
+        <nav>
+            <div class="container nav-wrapper">
+                <img id="logo" src="images/logo_sm.png" height="100%" style="display:none;">
+                <a href="#" class="brand-logo">CS Club</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li class="active"><a href="//csclub.org.au">Home</a></li>
+                    <li><a href="//csclub.org.au/about">About</a></li>
+                    <li><a href="//csclub.org.au/join">Join</a></li>
+                    <li><a href="//csclub.org.au/contact">Contact</a></li>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
+            </div>
+        </nav>
     </div>
 
     <ul id="slide-out" class="side-nav">
         <li class="logo">
-            <a id="logo-container" href="#" class="brand-logo">                        
+            <a id="logo-container" href="//csclub.org.au" class="brand-logo">
                 <img src="images/logo.png" height="100%">
             </a>
         </li>
         <li class="search">
-          <div class="search-wrapper card">
-            <input id="search" placeholder="Search"><i class="material-icons">search</i>
-          </div>
+            <div class="search-wrapper card">
+                <input class="search" placeholder="Search"><i class="material-icons">search</i>
+                <div class="search-results"></div>
+            </div>
         </li>
-        <li class="active"><a href="index2.html"><i class="material-icons">home</i>Home</a></li>
-        <li><a href="about.html"><i class="material-icons">info</i>About</a></li>
-        <li><a href="join.html"><i class="material-icons">person_add</i>Join</a></li>
-        <li><a href="contact.html"><i class="material-icons">email</i>Contact</a></li>
+        <li class="active"><a href="//csclub.org.au"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="//csclub.org.au/about"><i class="material-icons">info</i>About</a></li>
+        <li><a href="//csclub.org.au/join"><i class="material-icons">person_add</i>Join</a></li>
+        <li><a href="//csclub.org.au/contact"><i class="material-icons">email</i>Contact</a></li>
     </ul>
-
-    <div id="header-fill"></div>
 
     <header class="header-home">
         <div class="container">
@@ -78,101 +75,113 @@
                 </div>
             </div>
         </div>
-    </header>
-
-<!--     <header>
-        <div class="container">
-            <h1>Header</h1>
+        <div class="header-down-arrow">
+            <i class="material-icons">keyboard_arrow_down</i>
         </div>
     </header>
- -->
 
-    <div id="learn" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h1>Learn</h1>
+    <main>
+        <div class="section">
+            <div id="learn" class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>Learn</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p class="flow-text">The club has a major focus on education and learning. We run workshops to assist students with
+                                their studies and host other types of educational events such as talks and guest lectures.
+                                </p>
+                        </div>
+                    </div>
+                    <div class="row pad-bottom">
+                        <div class="col s12 m6">
+                            <img src="images/event4.jpg" alt="" class="responsive-img">
+                        </div>
+                        <div class="col s12 m6 hide-on-small-only">
+                            <img src="images/event5.jpg" alt="" class="responsive-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer container-full">
+                    <div class="container">
+                        <p class="flow-text">As students, we are doing the best we can with our studies and learn as much as we can to develop
+                            our skills.</p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12">
-                    <p class="flow-text">The club has a major focus on education and learning. We run workshops to assist students with their studies and host other types of educational events such as talks and guest lectures. </p>
-                </div>
-            </div>
-            <div class="row pad-bottom">
-                <div class="col s12 m6">
-                    <img src="images/event4.jpg" alt="" class="responsive-img">
-                </div>
-                <div class="col s12 m6 hide-on-small-only">
-                    <img src="images/event5.jpg" alt="" class="responsive-img">
-                </div>
-            </div>
-        </div>
-        <div class="section-footer container-full">
-            <div class="container">
-                <p class="flow-text">As students, we are doing the best we can with our studies and learn as much as we can to develop our skills.</p>
-            </div>
-        </div>
-    </div>
-    
-    <div id="socialise" class="section">
-        <div class="container">
-            <h1>Socialise</h1>
-            <p class="flow-text">As well as focusing on education we are primarily a social club. Events such as meet and greets, games/movie nights, BBQs, and pub crawls are just some of the social events the club runs each year.</p>
-            <div class="row pad-bottom">
-                <div class="col s12 m6">
-                    <img src="images/event1.jpg" alt="" class="responsive-img">
-                </div>
-                <div class="col s12 m6 hide-on-small-only">
-                    <img src="images/event3.jpg" alt="" class="responsive-img">
-                </div>
-            </div>
-        </div>
-        <div class="section-footer container-full">
-            <div class="container">
-                <p class="flow-text">Come along, bring your friends and meet other students and people interested in computer science.</p>
-            </div>
-        </div>
-    </div>
 
-    <div id="code" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h1>Code</h1>
+            <div id="socialise" class="section">
+                <div class="container">
+                    <h1>Socialise</h1>
+                    <p class="flow-text">As well as focusing on education we are primarily a social club. Events such as meet and greets, games/movie
+                        nights, BBQs, and pub crawls are just some of the social events the club runs each year.</p>
+                    <div class="row pad-bottom">
+                        <div class="col s12 m6">
+                            <img src="images/event1.jpg" alt="" class="responsive-img">
+                        </div>
+                        <div class="col s12 m6 hide-on-small-only">
+                            <img src="images/event3.jpg" alt="" class="responsive-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer container-full">
+                    <div class="container">
+                        <p class="flow-text">Come along, bring your friends and meet other students and people interested in computer science.</p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12">
-                    <p class="flow-text">And of course, coding is what we do and (not always) love. Whether you're searching for some feedback on a project or some practice with technical programming questions the club is great way to meet other people and learn from more experienced students.</p>
-                </div>
-            </div>
-        </div>
-        <div class="section-footer container-full">
-            <div class="container">
-                <p class="flow-text">Understand tough concepts and write better code by learning and teaching each other of techniques and resources.</p>
-            </div>
-        </div>
-    </div>
 
-    <div id="join" class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h1>Thinking of joining?</h1>
+            <div id="code" class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>Code</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p class="flow-text">And of course, coding is what we do and love. Whether you're searching for some feedback on a
+                                project or some practice with technical programming questions the club is great way to meet
+                                other people and learn from more experienced students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer container-full">
+                    <div class="container">
+                        <p class="flow-text">Understand tough concepts and write better code by learning and teaching each other of techniques
+                            and resources.</p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12">
-                    <p class="flow-text">New members are always welcome! As a member some things you will have access to include computer science talks and workshops, catered social events, a wide network of other computer science students and graduates to learn from and make friends with.</p>
-                    <h5>First year students</h5>
-                    <p class="flow-text" style="margin-top:0.5em;">If you are a first year student there are many activities held by the club at the start of the year specifically for you. They will give you a chance to meet other students, help you ease into uni life and give you a head start with your subjects.</p>
-                    <p class="flow-text"><a class="btn-large waves-effect waves-light" href="join.html">Join CS Club</a></p>
-                    <p>Keep in mind that the club operates during the university accademic year.</p>
+
+            <div id="join">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>Thinking of joining?</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <p class="flow-text">New members are always welcome! As a member some things you will have access to include computer
+                                science talks and workshops, catered social events, a wide network of other computer science
+                                students and graduates to learn from and make friends with.</p>
+                            <div class="anchor" id="first-years"></div>
+                            <h5>First year students</h5>
+                            <p class="flow-text" style="margin-top:0.5em;">If you are a first year student there are many activities held by the club at the start of the
+                                year specifically for you. They will give you a chance to meet other students, help you ease
+                                into uni life and give you a head start with your subjects.</p>
+                            <p class="flow-text"><a class="btn-large cs-blue-bg waves-effect waves-light" href="//csclub.org.au/join">Join CS Club</a></p>
+                            <p>Keep in mind that the club operates during the university academic year.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <footer>
         <div class="container">
@@ -183,20 +192,21 @@
                         The University of Adelaide
                     </p>
                     <p>
-                        <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Join</a> | <a href="#">Contact</a>
+                        <a href="//csclub.org.au">Home</a> | <a href="//csclub.org.au/about">About</a> | <a href="//csclub.org.au/join">Join</a>                        | <a href="//csclub.org.au/contact">Contact</a>
                     </p>
                 </div>
                 <div class="col s12 m4">
                     <div class="search-wrapper card">
                         <input class="search" placeholder="Search">
                         <i class="material-icons">search</i>
+                        <div class="search-results card"></div>
                     </div>
                     <div>
                         Connect with us<br>
                         <span class="social-icons">
-                            <a href="#"><i class="fa fa-facebook-official"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-github"></i></a>
+                            <a href="https://www.facebook.com/compsci.adl/" target="_blank"><i class="fa fa-facebook-official"></i></a>
+                            <a href="https://twitter.com/CompSciAdl" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="https://github.com/compsci-adl" target="_blank"><i class="fa fa-github"></i></a>
                         </span>
                     </div>
                 </div>
@@ -206,67 +216,22 @@
                     <p>
                         &copy; 2017 Computer Science Club. All rights reserved.
                     </p>
-                </div>            
-            </div>            
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/materialize.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- JS plugins and individual files -->
+    <script src="js/csclub.materialize-v1.0.js"></script>
     <script src="js/typed.js"></script>
+    <script src="js/lunr.min.js"></script>
+    <script src="js/search.js"></script>
+    <!-- CS Club js -->
+    <script src="js/csclub.common.js"></script>
+    <script src="js/csclub.home.js"></script>
 
-    <script>
-    $( document ).ready(function() {
-        $(".button-collapse").sideNav();
-
-        // Nav logo fade in/out
-        var topofDiv = $("#header-logo").offset().top; //gets offset of #header-logo
-        var height = $("#header-logo").outerHeight(); //gets height of #header-logo
-        $(window).scroll(function(){
-            if($(window).scrollTop() > (topofDiv + height)){
-            $("#logo").stop().fadeIn({duration:400});
-            $(".brand-logo").addClass('with-logo');
-            }
-            else{
-            $("#logo").stop().fadeOut({duration:400});
-            $(".brand-logo").removeClass('with-logo');
-            }
-        });
-    });
-    $(window).on('load', function() {
-        if (!localStorage.getItem('csclub.org.au_visited')) {
-            $("#tagline").typed({
-                strings: [
-                    "Workshops", 
-                    "Social events", 
-                    "Studying", 
-                    'Computer Science Club<br><span class="typed-button">JOIN TODAY</span>'
-                ],
-                contentType: 'html',
-                typeSpeed: 100,
-                backSpeed: 50,
-                backDelay: 500,
-                callback: function(){ typedCallback(); }
-            });
-        } else {
-            $('#tagline').html('Computer Science Club<br><span class="typed-button waves-effect waves-light btn">JOIN TODAY</span>');
-        }
-    });
-    function typedCallback() {
-        console.log('Callback');
-        $('.typed-cursor').addClass('invisible');
-        $('.typed-button').addClass('waves-effect waves-light btn');
-        localStorage.setItem('csclub.org.au_visited', true);        
-    }
-    $(document).on('keydown', function(e) {
-        if (e.keyCode == 65 && e.ctrlKey) {
-            e.preventDefault();
-            localStorage.removeItem('csclub.org.au_visited');        
-        }
-    });
-    </script>
 </body>
 
 </html>

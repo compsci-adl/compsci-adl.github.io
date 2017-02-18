@@ -3,6 +3,17 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
+/*
+ * CUSTOM CS CLUB MODIFICATIONS v1.0 - 18/02/2017
+ * Some custom edits/fixes have been made to improve some parts of Materialize. These include:
+ *  - Added fixed-nav width correction when mobile side menu is active
+ *  - Added custom event triggers when collapsible (Expandable) completes opening and closing (opened, closed)
+ * 
+ * NOTE: All modifications are flagged with a "CS CLUB CUSTOM FIX" comment.
+ * Kind regards, Ed Bittner
+ */
+
 // Check for jQuery.
 if (typeof(jQuery) === 'undefined') {
   var jQuery;
@@ -480,6 +491,7 @@ if (jQuery) {
       }
 
       // Expandable Open
+      // Added custom triggers (opened, closed) on completion of animation.
       function expandableOpen(object) {
         if (object.hasClass('active')) {
           object.parent().addClass('active');
@@ -488,10 +500,10 @@ if (jQuery) {
           object.parent().removeClass('active');
         }
         if (object.parent().hasClass('active')){
-          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
+          object.siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', ''); $(this).trigger('opened');}});
         }
         else {
-          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', '');}});
+          object.siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false, complete: function() {$(this).css('height', ''); $(this).trigger('closed');}});
         }
       }
 
@@ -2406,6 +2418,10 @@ if (jQuery) {
             overflow: '',
             width: ''
           });
+          // CS CLUB CUSTOM FIX
+          // Correct fixed nav width
+          var $nav = $('.navbar-fixed').find('nav');
+          $nav.width('');
 
           $('#sidenav-overlay').velocity({opacity: 0}, {duration: 200,
               queue: false, easing: 'easeOutQuad',
@@ -2621,6 +2637,10 @@ if (jQuery) {
             var oldWidth = $body.innerWidth();
             $body.css('overflow', 'hidden');
             $body.width(oldWidth);
+            // CS CLUB CUSTOM FIX
+            // Correct fixed nav width
+            var $nav = $('.navbar-fixed').find('nav');
+            $nav.width(oldWidth);
 
             // Push current drag target on top of DOM tree
             $('body').append($dragTarget);

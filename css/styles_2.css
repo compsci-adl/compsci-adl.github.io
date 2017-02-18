@@ -1,16 +1,18 @@
-/* Color schemes
- * *****************
- * dark = #313d4c
- * blue = #1bb8d1
- * yellow = #fcc018
- * pink = #e71a64
- */
-
-
 html, body {
     height: 100%;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Text colours */
 .cs-dark {
   color: #313d4c;
 }
@@ -23,15 +25,32 @@ html, body {
 .cs-pink {
   color: #E71A64;
 }
+/* Background colours */
+.cs-dark-bg {
+  color: white;
+  background-color: #313d4c !important;
+}
+.cs-blue-bg {
+  color: white;
+  background-color: #1BB8D1 !important;
+}
+.cs-yellow-bg {
+  color: white;
+  background-color: #FCC018 !important;
+}
+.cs-pink-bg {
+  color: white;
+  background-color: #E71A64 !important;
+}
 
 h1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 ul.dot-points {
   list-style: disc;
-  padding-left: 20px;
+  padding-left: 24px;
 }
 ul.dot-points li {
   list-style: disc;
@@ -52,7 +71,6 @@ header {
   background-image: url('../images/header_bg.jpg');
   background-size: cover;
   background-position: center bottom;
-  /*background-attachment: fixed;*/
   padding: 30px;
   color: white;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
@@ -62,20 +80,60 @@ header {
 }
 header.header-home {
   padding-top: 80px;
-  min-height: 60%;
+  padding-bottom: 80px;
 }
 
 header .container {
-  /*position: fixed;*/
   z-index: 1;
   left: 0;
   right: 0;
+}
+
+.header-text {
+  line-height: 80%;
 }
 
 #logo {
   padding: 10px;
   display: inline;
   position: absolute;
+}
+
+.header-down-arrow {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.header-down-arrow i {
+  padding-bottom: 0.7rem;
+  font-size: 6rem;
+  opacity: 0.4;
+  transition: all 400ms ease-in;
+}
+.header-down-arrow i:hover {
+  transition: all 400ms ease-out;
+  cursor: pointer;
+  padding-bottom: 0;
+  opacity: 1;
+}
+
+.search-results a {
+  color: rgba(0,0,0,0.87) !important;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 16px 10px;
+  height: auto;
+}
+.search-results a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+.search-results a.focused {
+  background-color: #eee;
+  outline: none;
 }
 
 .material-icons.heading-icon,
@@ -141,12 +199,14 @@ ul.side-nav li.logo a:hover {
 
 .navbar-fixed {
   z-index: 997;
-  /*height: 0;*/
+  flex: 0 0 auto;
 }
 
 nav {
   background: #313d4c;
-  /*box-shadow: none;*/
+}
+nav .button-collapse i {
+  font-size: 2.7rem;
 }
 
 .fixed {
@@ -155,18 +215,11 @@ nav {
   height: auto;
 }
 
-.header-banner {
-}
 .header-banner h1 {
   margin: 0;
 }
 
 .navbar-csclub {
-  /*background-color: #313d4c;*/
-  /*background-color: rgba(255,255,255,0.03);*/
-  /*background-color: rgba(49, 61, 76, 0.8);*/
-  /*border: none !important;*/
-  /*border-bottom: 1px solid rgba(255,255,255,0.1) !important;*/
   border-radius: 0px;
   margin-bottom: 0px;
   height: 80px;
@@ -174,12 +227,7 @@ nav {
 
 .section {
   position: relative;
-  /*color: white;*/
-  /*padding: 30px 0px;*/
-  padding-bottom: 0;
-  /*min-height: calc(100% - 64px);*/
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  /*font-size: 24px;*/
   font-weight: 300;
 }
 .section .row {
@@ -194,15 +242,28 @@ nav {
   padding-right: 0.5rem;
 }
 
-.section-footer {
-  color: white;
-  font-size: 2rem;
-  background-color: #888;
+.section-header,
+.section-footer,
+.section-banner {
   padding: 1rem 0;
-  /*position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;*/
+}
+.section-header strong,
+.section-footer strong,
+.section-banner strong {
+  color: #313d4c;
+}
+.section-header.default,
+.section-footer.default,
+.section-banner.default {
+  background-color: #efefef;
+}
+
+.section-header {
+  margin-top: -1rem;
+}
+.section-footer {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
 }
 
 #learn h1 {
@@ -231,14 +292,17 @@ nav {
 }
 
 #learn .section-footer {
+  color: white;
   background-color: #1BB8D1;
   padding: 1rem 0
 }
 #socialise .section-footer {
+  color: white;
   background-color: #FCC018;
   padding: 1rem 0
 }
 #code .section-footer {
+  color: white;
   background-color: #E71A64;
   padding: 1rem 0
 }
@@ -272,6 +336,16 @@ nav {
     cursor: pointer;
 }
 
+.collapsible .collapsible-section-header {
+  background-color: #eee;
+  color: #313d4c;
+  padding: 15px 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  border-bottom: 1px solid rgba(160,160,160,0.2);
+  border-top: 1px solid rgba(160,160,160,0.2);
+}
+
 footer {
   color: #7a7f85;
   padding: 30px 0 15px;
@@ -282,7 +356,6 @@ footer h2,
 footer h3, 
 footer h4, 
 footer h5 {
-  /*color: white;*/
   color: #adb0b4;
 }
 footer a {
@@ -291,6 +364,27 @@ footer a {
 }
 footer a:hover {
   color: white;
+}
+
+footer .search-wrapper {
+  display: none;
+}
+.search-wrapper .search-title,
+.search-wrapper .search-body,
+.search-wrapper .search-href {
+  display: block;
+}
+.search-wrapper .search-body {
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #888;
+}
+.search-wrapper .search-title {
+  line-height: 1.5em;
+}
+.search-wrapper .search-href {
+  font-size: 12px;
+  line-height: 1.5em;
 }
 
 .social-icons {
@@ -327,6 +421,7 @@ footer a:hover {
   transition: all 400ms ease-in-out;
   height: auto;
   line-height: initial;
+  color: white;
 }
 .typed-button.btn {
   background-color: #1BB8D1;
@@ -340,17 +435,14 @@ footer a:hover {
   position: relative;
   background-color: inherit;
   border-bottom: 1px solid rgba(160,160,160,0.2);
-  padding: 20px;
-}
-.card .card-section {
-  /*border-bottom: 1px solid rgba(160,160,160,0.2);*/
+  padding: 24px;
 }
 .card .card-section .card-section-header {
   background-color: #eee;
   color: #313d4c;
-  padding: 15px 20px;
-  margin-left: -20px;
-  margin-right: -20px;
+  padding: 15px 24px;
+  margin-left: -24px;
+  margin-right: -24px;
   border-bottom: 1px solid rgba(160,160,160,0.2);
   border-top: 1px solid rgba(160,160,160,0.2);
 }
@@ -388,6 +480,15 @@ footer a:hover {
   vertical-align: middle;
 }
 
+.required::after {
+  display: inline-block !important;
+  content: "*" !important;
+  color: #E71A64 !important;
+  padding-left: 0.5rem !important;
+  padding-left: 0.5rem !important;
+  opacity: 1 !important;
+  top: 0 !important;
+}
 .required-section::after {
   content: "*";
   color: #E71A64;
@@ -431,7 +532,7 @@ footer a:hover {
 }
 
 .row.degree-options .col p:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -460,12 +561,12 @@ footer a:hover {
   .section h1 {
     font-size: 3rem;
   }
+  #join h1 {
+    font-size: 2.5rem;
+  }
   .header-text {
     font-size: 1.6rem;
-  }
-
-  header.header-home {
-    min-height: 80%;
+    height: calc(1.6rem * 4);
   }
 }
 
@@ -473,8 +574,12 @@ footer a:hover {
   .section h1 {
     font-size: 3.25rem;
   }
+  #join h1 {
+    font-size: 2.7rem;
+  }
   .header-text {
     font-size: 1.67rem;
+    height: calc(1.67rem * 4);
   }
 }
 
@@ -482,8 +587,12 @@ footer a:hover {
   .section h1 {
     font-size: 3.5rem;
   }
+  #join h1 {
+    font-size: 2.9rem;
+  }
   .header-text {
     font-size: 1.74rem;
+    height: calc(1.74rem * 4);
   }
 }
 
@@ -491,8 +600,12 @@ footer a:hover {
   .section h1 {
     font-size: 3.75rem;
   }
+  #join h1 {
+    font-size: 3.2rem;
+  }
   .header-text {
     font-size: 1.81rem;
+    height: calc(1.81rem * 4);
   }
 }
 
@@ -500,8 +613,12 @@ footer a:hover {
   .section h1 {
     font-size: 4rem;
   }
+  #join h1 {
+    font-size: 3.4rem;
+  }
   .header-text {
     font-size: 1.88rem;
+    height: calc(1.88rem * 4);
   }
 }
 
@@ -509,8 +626,12 @@ footer a:hover {
   .section h1 {
     font-size: 4.25rem;
   }
+  #join h1 {
+    font-size: 3.6rem;
+  }
   .header-text {
     font-size: 1.95rem;
+    height: calc(1.95rem * 4);
   }
 }
 
@@ -518,8 +639,12 @@ footer a:hover {
   .section h1 {
     font-size: 4.5rem;
   }
+  #join h1 {
+    font-size: 3.8rem;
+  }
   .header-text {
     font-size: 2.02rem;
+    height: calc(2.02rem * 4);
   }
 }
 
@@ -527,8 +652,12 @@ footer a:hover {
   .section h1 {
     font-size: 4.75rem;
   }
+  #join h1 {
+    font-size: 4.1rem;
+  }
   .header-text {
     font-size: 2.09rem;
+    height: calc(2.09rem * 4);
   }
 }
 
@@ -538,6 +667,7 @@ footer a:hover {
   }
   .header-text {
     font-size: 2.16rem;
+    height: calc(2.16rem * 4);
   }
 }
 
@@ -545,8 +675,12 @@ footer a:hover {
   .section h1 {
     font-size: 5.25rem;
   }
+  #join h1 {
+    font-size: 4.3rem;
+  }
   .header-text {
     font-size: 2.23rem;
+    height: calc(2.23rem * 4);
   }
 }
 
@@ -554,8 +688,12 @@ footer a:hover {
   .section h1 {
     font-size: 5.5rem;
   }
+  #join h1 {
+    font-size: 4.5rem;
+  }
   .header-text {
     font-size: 2.3rem;
+    height: calc(2.3rem * 4);
   }
 }
 
@@ -563,8 +701,12 @@ footer a:hover {
   .section h1 {
     font-size: 5.75rem;
   }
+  #join h1 {
+    font-size: 4.7rem;
+  }
   .header-text {
     font-size: 2.37rem;
+    height: calc(2.37rem * 4);
   }
 }
 
@@ -572,8 +714,12 @@ footer a:hover {
   .section h1 {
     font-size: 6rem;
   }
+  #join h1 {
+    font-size: 4.9rem;
+  }
   .header-text {
     font-size: 2.44rem;
+    height: calc(2.44rem * 4);
   }
 }
 
@@ -581,8 +727,12 @@ footer a:hover {
   .section h1 {
     font-size: 6.25rem;
   }
+  #join h1 {
+    font-size: 5.1rem;
+  }
   .header-text {
     font-size: 2.51rem;
+    height: calc(2.51rem * 4);
   }
 }
 
@@ -590,8 +740,12 @@ footer a:hover {
   .section h1 {
     font-size: 6.5rem;
   }
+  #join h1 {
+    font-size: 5.3rem;
+  }
   .header-text {
     font-size: 2.58rem;
+    height: calc(2.58rem * 4);
   }
 }
 
@@ -599,8 +753,12 @@ footer a:hover {
   .section h1 {
     font-size: 6.75rem;
   }
+  #join h1 {
+    font-size: 5.4rem;
+  }
   .header-text {
     font-size: 2.65rem;
+    height: calc(2.65rem * 4);
   }
 }
 
@@ -608,8 +766,12 @@ footer a:hover {
   .section h1 {
     font-size: 7rem;
   }
+  #join h1 {
+    font-size: 5.5rem;
+  }
   .header-text {
     font-size: 2.72rem;
+    height: calc(2.72rem * 4);
   }
 }
 
@@ -617,8 +779,12 @@ footer a:hover {
   .section h1 {
     font-size: 7.25rem;
   }
+  #join h1 {
+    font-size: 5.9rem;
+  }
   .header-text {
     font-size: 2.79rem;
+    height: calc(2.79rem * 4);
   }
 }
 
@@ -626,8 +792,13 @@ footer a:hover {
   .section h1 {
     font-size: 7.5rem;
   }
+  
+  #join h1 {
+    font-size: 6.1rem;
+  }
   .header-text {
     font-size: 2.86rem;
+    height: calc(2.86rem * 4);
   }
 }
 
@@ -635,8 +806,12 @@ footer a:hover {
   .section h1 {
     font-size: 7.75rem;
   }
+  #join h1 {
+    font-size: 6.4rem;
+  }
   .header-text {
     font-size: 2.93rem;
+    height: calc(2.93rem * 4);
   }
 }
 
@@ -644,20 +819,56 @@ footer a:hover {
   .section h1 {
     font-size: 8rem;
   }
+  #join h1 {
+    font-size: 6.6rem;
+  }
   .header-text {
     font-size: 3rem;
+    height: calc(3rem * 4);
   }
 }
 
+@media only screen and (min-width: 993px) {
+  footer .search-wrapper {
+    display: block;
+  }
+  #join h1 {
+    font-size: 7.75vw;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  #join h1 {
+    font-size: 8rem;
+  }
+}
+
+
+@media only screen and (max-width: 420px) {
+  .header-text {
+    line-height: 110%;
+  }
+  .home .section,
+  footer {
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 360px) {
   .section h1 {
     font-size: 3rem;
   }
   .header-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    height: calc(1.2rem * 4);
+    line-height: 120%;
+  }
+  #join h1 {
+    font-size: 2.25rem;
+  }
+
+  .about form .card-header {
+    padding: 10px;
   }
 }
-
 @media screen and (max-height: 575px){
   #rc-imageselect, .g-recaptcha {
     transform:scale(0.77);
