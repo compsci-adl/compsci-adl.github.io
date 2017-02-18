@@ -51,7 +51,9 @@ $(document).ready(function () {
     var results = validateForm();
     var scroll_to = Number.MAX_SAFE_INTEGER;
     // If validation fails
-    if (results["response_code"] === 0 || results["errors"].length > 0) {
+    if (results["response_code"] === 0) {
+      Materialize.toast("<i class='material-icons'>report_problem</i>Please prove you're not a robot.", 8000, 'pink');
+    } else if (results["errors"].length > 0) {
       results["errors"].each(function (index, value) {
         if ($(value).prop("tagName") == "INPUT") {
           $(value).addClass('invalid');
@@ -148,9 +150,9 @@ $(document).ready(function () {
     var captcha_response = grecaptcha.getResponse();
     if(captcha_response.length == 0) {
       // Captcha is not Passed
-      results["response_token"] = 0;
+      results["gcaptcha_token"] = 0;
     } else {
-      results["response_token"] = 1;
+      results["gcaptcha_token"] = 1;
     }
 
     results["errors"] = required_fields;
