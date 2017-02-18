@@ -72,7 +72,7 @@ $(document).ready(function () {
       $('#loading').removeClass('hide');
       Materialize.toast('<i class="material-icons">done</i>Processing request', 8000)
       var form_data = formToJson(("#join-form"));
-      // console.log(form_data);
+      console.log(form_data);
 
       // ** DEVELOPMENT - Test completing request
       var colours = ['blue', 'yellow', 'pink', 'dark'];
@@ -136,19 +136,11 @@ $(document).ready(function () {
       if ($("input[name=degree][type=radio]:checked").val() == "other" && $.trim($("input[name=degree][type=text]").val()).length == 0) {
         required_fields.push($("input#degree6")[0]);
       }
-    }
-    if ($("input[name=availability][type=checkbox]:checked").length == 0) {
-      required_fields.push($(".availability-options")[0]);
-    }
-    if ($("input[name=events][type=checkbox]:checked").length == 0) {
-      required_fields.push($(".event-options")[0]);
-    } else {
-      if ($("#other_event_check").prop("checked") && $.trim($("input#other_event").val()).length == 0) {
-        required_fields.push($("input#other_event")[0]);
-      }
-    }
-    if ($("input[name=slack_invite][type=radio]:checked").length == 0) {
-      required_fields.push($(".slack-options")[0]);
+
+      // If the user says they've paid, then make sure the receipt is given.
+      // if ($("input[name=has_paid]").val() == "on") {
+      //   required_fields.push($("input#square_receipt")[0]);
+      // }
     }
 
     // var captcha_response = grecaptcha.getResponse();

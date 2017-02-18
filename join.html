@@ -121,14 +121,33 @@
                   </div>
                 </div>
 
+                <div class='card-section'>
+                  <div class='card-section-header'>
+                    <h4 class='required-section'>
+                      <i class="material-icons heading-icon">card_membership</i>Your Membership</h4>
+                  </div>
+                  
+                  <div class='row'>
+                    <div class='input-field col s12 m6'>
+                      <input name="has_paid" id="has_paid" type="checkbox" class="validate">
+                      <label for="has_paid">I've Paid</label>
+                    </div>
+                    <div class='input-field col s12 m6'>
+                      <label for="square_receipt">Square Receipt</label>
+                      <input name="square_receipt" id="square_receipt" type="text" class="validate">
+                    </div>
+                    </div>
+                </div>
+
                 <div class="card-section">
                   <div class="card-section-header">
-                    <h4 class="required-section"><i class="material-icons heading-icon">school</i>University</h4>
+                    <h4>
+                      <i class="material-icons heading-icon">school</i>University</h4>
                   </div>
                   <div class="row">
                     <div class="input-field col s12 m2">
-                      <input name="student_no" id="student_no" type="text" class="validate" required placeholder="a1234567">
                       <label for="student_no">Student No.</label>
+                      <input name="student_no" id="student_no" type="text" class="validate" required placeholder="a1234567">
                     </div>
                   </div>
                   <div class="row">
@@ -173,100 +192,6 @@
                       <div class="input-field col s6 m3">
                         <input name="year" id="year" type="number" class="validate" required min="1" max="8" step="1" />
                         <label for="year">Year</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-section">
-                  <div class="card-section-header">
-                    <h4 class="required-section"><i class="material-icons heading-icon">event</i>Social &amp; Events</h4>
-                  </div>
-                  <div class="row">
-                    <div class="col s12">
-                      <h5>What nights would you be available for social events?</h5>
-                      <ul class="availability-options">
-                        <li>
-                          <input name="availability" id="monday" type="checkbox" class="filled-in" value="monday" />
-                          <label for="monday">Monday</label>
-                        </li>
-                        <li>
-                          <input name="availability" id="tuesday" type="checkbox" class="filled-in" value="tuesday" />
-                          <label for="tuesday">Tuesday</label>
-                        </li>
-                        <li>
-                          <input name="availability" id="wednesday" type="checkbox" class="filled-in" value="wednesday" />
-                          <label for="wednesday">Wednesday</label>
-                        </li>
-                        <li>
-                          <input name="availability" id="thursday" type="checkbox" class="filled-in" value="thursday" />
-                          <label for="thursday">Thursday</label>
-                        </li>
-                        <li>
-                          <input name="availability" id="friday" type="checkbox" class="filled-in" value="friday" />
-                          <label for="friday">Friday</label>
-                        </li>
-                        <li>
-                          <input name="availability" id="none" type="checkbox" class="filled-in" value="none" />
-                          <label for="none">None <i class="material-icons" style="vertical-align:text-bottom;font-size:20px;">sentiment_very_dissatisfied</i></label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col s12">
-                      <h5>What sort of events would you be interested in?</h5>
-                      <ul class="event-options">
-                        <li>
-                          <input name="events" id="social" type="checkbox" class="filled-in" value="social" />
-                          <label for="social">Social</label>
-                        </li>
-                        <li>
-                          <input name="events" id="educational" type="checkbox" class="filled-in" value="educational" />
-                          <label for="educational">Educational</label>
-                        </li>
-                        <li>
-                          <input name="events" id="other_event_check" type="checkbox" class="filled-in" value="other" />
-                          <label for="other_event_check">
-                            Other:
-                            <span class="input-field inline inline-checkbox">
-                              <input name="events" id="other_event" placeholder="Please specify" type="text" class="validate" />
-                            </span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col s12">
-                      <h5>Would you like an invite to the
-                        <a href="//csclub.org.au/about#slack" class="tooltipped" data-position="bottom" data-delay="100" data-tooltip="Our chatroom for members. Click for more information.">CS Club Slack</a>?</h5>
-                      <ul class="slack-options">
-                        <li>
-                          <input name="slack_invite" type="radio" id="slack_yes" value="yes" />
-                          <label for="slack_yes">Yes</label>
-                        </li>
-                        <li>
-                          <input name="slack_invite" type="radio" id="slack_no" value="no" />
-                          <label for="slack_no">No</label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-section">
-                  <div class="card-section-header">
-                    <h4><i class="material-icons heading-icon">feedback</i>Feedback</h4>
-                  </div>
-                  <div class="row">
-                    <div class="col s12">
-                      <h5>Any suggestions / feedback / comments?</h5>
-                      <div class="input-field">
-                        <textarea name="comments" id="comments" class="materialize-textarea"></textarea>
-                        <label for="comments">Your answer</label>
                       </div>
                     </div>
                   </div>
