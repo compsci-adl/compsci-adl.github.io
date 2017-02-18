@@ -148,14 +148,13 @@ $(document).ready(function () {
     var captcha_response = grecaptcha.getResponse();
     if(captcha_response.length == 0) {
       // Captcha is not Passed
-      captcha_response = 0;
-      // required_fields.push($(".g-recaptcha")[0]);
+      results["response_token"] = 0;
+    } else {
+      results["response_token"] = 1;
     }
 
     results["errors"] = required_fields;
     console.log(captcha_response);
-    results["response_token"] = captcha_response;
-    // results["response_token"] = 0;
 
     return results;
   }
