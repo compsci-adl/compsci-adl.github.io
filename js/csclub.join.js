@@ -145,9 +145,10 @@ $(document).ready(function () {
       }
     }
 
-    // var captcha_response = grecaptcha.getResponse();
+    var captcha_response = grecaptcha.getResponse();
     if(captcha_response.length == 0) {
       // Captcha is not Passed
+      // captcha_response = 
       required_fields.push($(".g-recaptcha")[0]);
     }
 
