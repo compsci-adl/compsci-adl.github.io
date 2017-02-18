@@ -72,7 +72,9 @@ $(document).ready(function () {
       $('#loading').removeClass('hide');
       Materialize.toast('<i class="material-icons">done</i>Processing request', 8000)
       var form_data = formToJson(("#join-form"));
-      console.log(form_data);
+      
+      firebase.database().ref('members/' + form_data.first_name + '_' + form_data.last_name).set(form_data);
+      // console.log(form_data);
 
       // ** DEVELOPMENT - Test completing request
       var colours = ['blue', 'yellow', 'pink', 'dark'];
@@ -138,9 +140,9 @@ $(document).ready(function () {
       }
 
       // If the user says they've paid, then make sure the receipt is given.
-      // if ($("input[name=has_paid]").val() == "on") {
-      //   required_fields.push($("input#square_receipt")[0]);
-      // }
+      if ($("input[name=has_paid]:checked").length != 0) {
+        required_fields.push($("input#square_receipt")[0]);
+      }
     }
 
     // var captcha_response = grecaptcha.getResponse();
