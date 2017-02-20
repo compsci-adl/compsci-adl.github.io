@@ -141,11 +141,6 @@ $(document).ready(function () {
       if ($("input[name=degree][type=radio]:checked").val() == "other" && $.trim($("input[name=degree][type=text]").val()).length == 0) {
         required_fields.push($("input#degree6")[0]);
       }
-
-      // If the user says they've paid, then make sure the receipt is given.
-      if ($("input[name=has_paid]:checked").length != 0) {
-        required_fields.push($("input#square_receipt")[0]);
-      }
     }
 
     var captcha_response = grecaptcha.getResponse();
