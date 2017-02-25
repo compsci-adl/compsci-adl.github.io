@@ -12,12 +12,12 @@
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c=" crossorigin="anonymous" />
     <!-- General stylesheet -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="/images/icon.png">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +31,7 @@
     <div class="navbar-fixed">
         <nav>
             <div class="container nav-wrapper">
-                <img id="logo" src="images/logo_sm.png" height="100%" style="display:none;">
+                <img id="logo" src="/images/logo_sm.png" style="height: 100%; display:none;" alt="">
                 <a href="#" class="brand-logo">CS Club</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li class="active"><a href="/">Home</a></li>
@@ -47,7 +47,7 @@
     <ul id="slide-out" class="side-nav">
         <li class="logo">
             <a id="logo-container" href="/" class="brand-logo">
-                <img src="images/logo.png" height="100%">
+                <img src="/images/logo.png" style="height: 100%;" alt="">
             </a>
         </li>
         <li class="search">
@@ -66,12 +66,14 @@
         <div class="container">
             <div class="row">
                 <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
-                    <img id="header-logo" src="images/logo.png" style="width:100%;">
+                    <img id="header-logo" src="images/logo.png" style="width:100%;" alt="">
                 </div>
             </div>
             <div class="row">
                 <div class="col s12">
-                    <h4 class="header-text center"><span id="tagline"></span></h4>
+                    <h4 class="header-text center">
+						<span id="tagline">&nbsp;</span>
+					</h4>
                 </div>
             </div>
         </div>
@@ -91,9 +93,8 @@
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <p class="flow-text">The club has a major focus on education and learning. We run workshops to assist students with
-                                their studies and host other types of educational events such as talks and guest lectures.
-                                </p>
+                            <p class="flow-text">The club has a major focus on education and learning. We run workshops to assist students with their studies and host other types of educational events such as talks and guest lectures.
+                            </p>
                         </div>
                     </div>
                     <div class="row pad-bottom">
@@ -107,8 +108,7 @@
                 </div>
                 <div class="section-footer container-full">
                     <div class="container">
-                        <p class="flow-text">As students, we are doing the best we can with our studies and learn as much as we can to develop
-                            our skills.</p>
+                        <p class="flow-text">As students, we are doing the best we can with our studies and learn as much as we can to develop our skills.</p>
                     </div>
                 </div>
             </div>
@@ -116,8 +116,7 @@
             <div id="socialise" class="section">
                 <div class="container">
                     <h1>Socialise</h1>
-                    <p class="flow-text">As well as focusing on education we are primarily a social club. Events such as meet and greets, games/movie
-                        nights, BBQs, and pub crawls are just some of the social events the club runs each year.</p>
+                    <p class="flow-text">As well as focusing on education we are primarily a social club. Events such as meet and greets, games/movie nights, BBQs, and pub crawls are just some of the social events the club runs each year.</p>
                     <div class="row pad-bottom">
                         <div class="col s12 m6">
                             <img src="images/event1.jpg" alt="" class="responsive-img">
@@ -143,16 +142,13 @@
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <p class="flow-text">And of course, coding is what we do and love. Whether you're searching for some feedback on a
-                                project or some practice with technical programming questions the club is great way to meet
-                                other people and learn from more experienced students.</p>
+                            <p class="flow-text">And of course, coding is what we do and love. Whether you're searching for some feedback on a project or some practice with technical programming questions the club is great way to meet other people and learn from more experienced students.</p>
                         </div>
                     </div>
                 </div>
                 <div class="section-footer container-full">
                     <div class="container">
-                        <p class="flow-text">Understand tough concepts and write better code by learning and teaching each other of techniques
-                            and resources.</p>
+                        <p class="flow-text">Understand tough concepts and write better code by learning and teaching each other of techniques and resources.</p>
                     </div>
                 </div>
             </div>
@@ -166,14 +162,10 @@
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <p class="flow-text">New members are always welcome! As a member some things you will have access to include computer
-                                science talks and workshops, catered social events, a wide network of other computer science
-                                students and graduates to learn from and make friends with.</p>
+                            <p class="flow-text">New members are always welcome! As a member some things you will have access to include computer science talks and workshops, catered social events, a wide network of other computer science students and graduates to learn from and make friends with.</p>
                             <div class="anchor" id="first-years"></div>
                             <h5>First year students</h5>
-                            <p class="flow-text" style="margin-top:0.5em;">If you are a first year student there are many activities held by the club at the start of the
-                                year specifically for you. They will give you a chance to meet other students, help you ease
-                                into uni life and give you a head start with your subjects.</p>
+                            <p class="flow-text" style="margin-top:0.5em;">If you are a first year student there are many activities held by the club at the start of the year specifically for you. They will give you a chance to meet other students, help you ease into uni life and give you a head start with your subjects.</p>
                             <p class="flow-text"><a class="btn-large cs-blue-bg waves-effect waves-light" href="/join">Join CS Club</a></p>
                             <p>Keep in mind that the club operates during the university academic year.</p>
                         </div>
@@ -188,11 +180,9 @@
             <div class="row">
                 <div class="col s12 m8">
                     <h5>Computer Science Club</h5>
+                    <p>The University of Adelaide</p>
                     <p>
-                        The University of Adelaide
-                    </p>
-                    <p>
-                        <a href="/">Home</a> | <a href="/about">About</a> | <a href="/join">Join</a>                        | <a href="/contact">Contact</a>
+                        <a href="/">Home</a> | <a href="/about">About</a> | <a href="/join">Join</a> | <a href="/contact">Contact</a>
                     </p>
                 </div>
                 <div class="col s12 m4">
@@ -202,20 +192,24 @@
                         <div class="search-results card"></div>
                     </div>
                     <div>
-                        Connect with us<br>
-                        <span class="social-icons">
-                            <a href="https://www.facebook.com/compsci.adl/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                            <a href="https://twitter.com/CompSciAdl" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://github.com/compsci-adl" target="_blank"><i class="fa fa-github"></i></a>
-                        </span>
+                        Connect with us
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/compsci.adl/" target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+                            <a href="https://twitter.com/CompSciAdl" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/compsci-adl" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <p>
-                        &copy; 2017 Computer Science Club. All rights reserved.
-                    </p>
+                <div class="row">
+                    <div class="col s12">
+                        <p>&copy; 2017 Computer Science Club. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -224,13 +218,13 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- JS plugins and individual files -->
-    <script src="js/csclub.materialize-v1.0.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/lunr.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="/js/csclub.materialize-v1.0.js"></script>
+    <script src="/js/typed.js"></script>
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
     <!-- CS Club js -->
-    <script src="js/csclub.common.js"></script>
-    <script src="js/csclub.home.js"></script>
+    <script src="/js/csclub.common.js"></script>
+    <script src="/js/csclub.home.js"></script>
 
 </body>
 

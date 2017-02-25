@@ -75,8 +75,8 @@ $(document).ready(function () {
       $('#loading').removeClass('hide');
       Materialize.toast('<i class="material-icons">done</i>Processing request', 8000)
       var form_data = formToJson(("#join-form"));
-      
-      firebase.database().ref('members/' + form_data.first_name + '_' + form_data.last_name).set(form_data);
+
+    //   firebase.database().ref('members/' + form_data.first_name + '_' + form_data.last_name).set(form_data);
       // console.log(form_data);
 
       // ** DEVELOPMENT - Test completing request

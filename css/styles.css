@@ -351,10 +351,10 @@ footer {
   padding: 30px 0 15px;
   background-color: #313d4c;
 }
-footer h1, 
-footer h2, 
-footer h3, 
-footer h4, 
+footer h1,
+footer h2,
+footer h3,
+footer h4,
 footer h5 {
   color: #adb0b4;
 }
@@ -475,6 +475,7 @@ footer .search-wrapper {
 
 #loading {
   padding-left: 15px;
+  display: inline-block;
 }
 #loading > .preloader-wrapper {
   vertical-align: middle;
@@ -792,7 +793,7 @@ footer .search-wrapper {
   .section h1 {
     font-size: 7.5rem;
   }
-  
+
   #join h1 {
     font-size: 6.1rem;
   }
