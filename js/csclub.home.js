@@ -30,7 +30,7 @@ $(window).on('load', function () {
         "Workshops",
         "Social events",
         "Studying",
-        'Computer Science Club<br><span class="flow-text" style="color:#ddd;">The University of Adelaide</span><br><a href="//csclub.org.au/join" class="typed-button">JOIN TODAY</a>'
+        'Computer Science Club<br><span class="flow-text" style="color:#ddd;">The University of Adelaide</span><br><a href="/join" class="typed-button">JOIN TODAY</a>'
       ],
       contentType: 'html',
       typeSpeed: 100,
@@ -39,7 +39,7 @@ $(window).on('load', function () {
       callback: function () { typedCallback(); }
     });
   } else {
-    $('#tagline').html('Computer Science Club<br><span class="flow-text" style="color:#ddd;">The University of Adelaide</span><br><a href="//csclub.org.au/join" class="typed-button waves-effect waves-light btn">JOIN TODAY</a>');
+    $('#tagline').html('Computer Science Club<br><span class="flow-text" style="color:#ddd;">The University of Adelaide</span><br><a href="/join" class="typed-button waves-effect waves-light btn">JOIN TODAY</a>');
     $('.header-down-arrow').fadeIn(800);
   }
 });
