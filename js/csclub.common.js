@@ -8,15 +8,18 @@ $(document).ready(function() {
     $(".button-collapse").sideNav();
 });
 
-// Initialise Firebase
-var config = {
-  apiKey: "AIzaSyCl2k_R5jYoBTSYoFjWaGgXKiSvUNg8MWk",
-  authDomain: "registration-7e966.firebaseapp.com",
-  databaseURL: "https://registration-7e966.firebaseio.com",
-  storageBucket: "registration-7e966.appspot.com",
-  messagingSenderId: "247117631911"
-};
-firebase.initializeApp(config);
+
+// Initialise Firebase, if the firebase library has already been included.
+if (typeof firebase != 'undefined') {
+    var config = {
+      apiKey: "AIzaSyCl2k_R5jYoBTSYoFjWaGgXKiSvUNg8MWk",
+      authDomain: "registration-7e966.firebaseapp.com",
+      databaseURL: "https://registration-7e966.firebaseio.com",
+      storageBucket: "registration-7e966.appspot.com",
+      messagingSenderId: "247117631911"
+    };
+    firebase.initializeApp(config);       
+}
 
 /*
  * Determines if the element is within the viewport or not
