@@ -18,7 +18,33 @@ if (typeof firebase != 'undefined') {
       storageBucket: "registration-7e966.appspot.com",
       messagingSenderId: "247117631911"
     };
-    firebase.initializeApp(config);       
+    firebase.initializeApp(config);  
+
+    firebase.auth().onAuthStateChanged(function(user) {
+    var btn = $('#signin')
+    if (user) {
+      // User is signed in.
+      btn.text("Sign Out");
+      btn.click(signout);
+    } else {
+      // User is signed out.
+      btn.text("Sign In");
+      btn.click(signin);
+    }
+  });
+
+  function signin() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithRedirect(provider)
+  }
+
+  function signout() {
+    firebase.auth().signOut().then(function() {
+      console.log('signed out');
+    }, function(error) {
+      console.error("signout error", error);
+    });
+  }     
 }
 
 /*
