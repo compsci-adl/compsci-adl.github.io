@@ -878,3 +878,8 @@ footer .search-wrapper {
     -webkit-transform-origin:0 0;
   }
 }
+
+#signin {
+  float:right;
+  top:20%;
+}
