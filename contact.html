@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
@@ -10,14 +9,22 @@
 
     <title>CS Club | Contact</title>
     <!-- Materialize -->
-    <link href="css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c=" crossorigin="anonymous" />
     <!-- General stylesheet -->
-    <link href="css/styles_2.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="/images/logo_sm.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/images/manifest.json">
+	<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/images/favicon.ico">
+	<meta name="msapplication-config" content="/images/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,13 +38,13 @@
     <div class="navbar-fixed">
         <nav>
             <div class="container nav-wrapper">
-                <img id="logo" src="images/logo_sm.png" height="100%">
+                <img id="logo" src="/images/logo_sm.png" style="height: 100%;" alt="">
                 <a href="#" class="brand-logo with-logo">CS Club</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="//csclub.org.au">Home</a></li>
-                    <li><a href="//csclub.org.au/about">About</a></li>
-                    <li><a href="//csclub.org.au/join">Join</a></li>
-                    <li class="active"><a href="//csclub.org.au/contact">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="join">Join</a></li>
+                    <li class="active"><a href="/contact">Contact</a></li>
                 </ul>
                 <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
             </div>
@@ -46,8 +53,8 @@
 
     <ul id="slide-out" class="side-nav">
         <li class="logo">
-            <a id="logo-container" href="//csclub.org.au" class="brand-logo">
-                <img src="images/logo.png" height="100%">
+            <a id="logo-container" href="/" class="brand-logo">
+                <img src="/images/logo.png" style="height: 100%;" alt="">
             </a>
         </li>
         <li class="search">
@@ -55,10 +62,10 @@
                 <input id="search" placeholder="Search"><i class="material-icons">search</i>
             </div>
         </li>
-        <li><a href="//csclub.org.au"><i class="material-icons">home</i>Home</a></li>
-        <li><a href="//csclub.org.au/about"><i class="material-icons">info</i>About</a></li>
-        <li><a href="//csclub.org.au/join"><i class="material-icons">person_add</i>Join</a></li>
-        <li class="active"><a href="//csclub.org.au/contact"><i class="material-icons">email</i>Contact</a></li>
+        <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="/about"><i class="material-icons">info</i>About</a></li>
+        <li><a href="/join"><i class="material-icons">person_add</i>Join</a></li>
+        <li class="active"><a href="/contact"><i class="material-icons">email</i>Contact</a></li>
     </ul>
 
     <header>
@@ -78,11 +85,11 @@
             <div class="row">
                 <div class="col s12">
                     <p class="flow-text">
-                        Want to get in touch with us? Fill in the form below and we'll get back to you as soon as we can.
+                        Want to get in touch with us? You can <a href="http://m.me/compsci.adl" target="_blank">message us on Facebook</a> or email us at <a href="mailto:contact@csclub.org.au" target="_blank">contact@csclub.org.au</a>.
                     </p>
                 </div>
             </div>
-            <div class="row form-row">
+            <!-- <div class="row form-row">
                 <form id="contact-form">
                     <div class="col s12">
                         <div class="card">
@@ -108,11 +115,6 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12 m12 l6">
-                                        <hidden id="subject" name="subject" type="text">
-                                    </div>
-                                </div>
-                                <div class="row">
                                     <div class="input-field col s12">
                                         <textarea id="message" name="message" class="materialize-textarea" required></textarea>
                                         <label for="message" class="required">Message</label>
@@ -126,7 +128,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </main>
 
@@ -135,11 +137,9 @@
             <div class="row">
                 <div class="col s12 m8">
                     <h5>Computer Science Club</h5>
+                    <p>The University of Adelaide</p>
                     <p>
-                        The University of Adelaide
-                    </p>
-                    <p>
-                        <a href="//csclub.org.au">Home</a> | <a href="//csclub.org.au/about">About</a> | <a href="//csclub.org.au/join">Join</a>                        | <a href="//csclub.org.au/contact">Contact</a>
+                        <a href="/">Home</a> | <a href="/about">About</a> | <a href="/join">Join</a> | <a href="/contact">Contact</a>
                     </p>
                 </div>
                 <div class="col s12 m4">
@@ -149,35 +149,38 @@
                         <div class="search-results card"></div>
                     </div>
                     <div>
-                        Connect with us<br>
-                        <span class="social-icons">
-                            <a href="https://www.facebook.com/compsci.adl/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                            <a href="https://twitter.com/CompSciAdl" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://github.com/compsci-adl" target="_blank"><i class="fa fa-github"></i></a>
-                        </span>
+                        Connect with us
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/compsci.adl/" target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+                            <a href="https://twitter.com/CompSciAdl" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/compsci-adl" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <p>
-                        &copy; 2017 Computer Science Club. All rights reserved.
-                    </p>
+                <div class="row">
+                    <div class="col s12">
+                        <p>&copy; 2017 Computer Science Club. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- JS plugins and individual files -->
-    <script src="js/csclub.materialize-v1.0.js"></script>
-    <script src="js/lunr.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="/js/csclub.materialize-v1.0.js"></script>
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
     <!-- CS Club js -->
-    <script src="js/csclub.common.js"></script>
-    <script src="js/csclub.contact.js"></script>
-
+    <script src="/js/csclub.common.js"></script>
+    <script src="/js/csclub.contact.js"></script>
 </body>
 
 </html>

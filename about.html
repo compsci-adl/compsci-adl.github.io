@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
@@ -10,14 +9,22 @@
 
     <title>CS Club | About</title>
     <!-- Materialize -->
-    <link href="css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c=" crossorigin="anonymous" />
     <!-- General stylesheet -->
-    <link href="css/styles_2.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="icon" type="image/png" href="/images/logo_sm.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/images/manifest.json">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,37 +38,38 @@
     <div class="navbar-fixed">
         <nav>
             <div class="container nav-wrapper">
-                <img id="logo" src="images/logo_sm.png" height="100%">
+                <img id="logo" src="/images/logo_sm.png" style="height: 100%;" alt="">
                 <a href="#" class="brand-logo with-logo">CS Club</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="//csclub.org.au">Home</a></li>
-                    <li class="active"><a href="//csclub.org.au/about">About</a></li>
-                    <li><a href="//csclub.org.au/join">Join</a></li>
-                    <li><a href="//csclub.org.au/contact">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/about">About</a></li>
+                    <li><a href="/join">Join</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
+                <a href="#" data-activates="slide-out" class="button-collapse right">
+                    <i class="material-icons hide-on-large-only">menu</i>
+                </a>
             </div>
         </nav>
     </div>
-
     <ul id="slide-out" class="side-nav">
         <li class="logo">
-            <a id="logo-container" href="//csclub.org.au" class="brand-logo">
-                <img src="images/logo.png" height="100%">
+            <a id="logo-container" href="/" class="brand-logo">
+                <img src="/images/logo.png" style="height: 100%;" alt="">
             </a>
         </li>
         <li class="search">
             <div class="search-wrapper card">
-                <input class="search" placeholder="Search"><i class="material-icons">search</i>
+                <input class="search" placeholder="Search">
+                <i class="material-icons">search</i>
                 <div class="search-results"></div>
             </div>
         </li>
-        <li><a href="//csclub.org.au"><i class="material-icons">home</i>Home</a></li>
-        <li class="active"><a href="//csclub.org.au/about"><i class="material-icons">info</i>About</a></li>
-        <li><a href="//csclub.org.au/join"><i class="material-icons">person_add</i>Join</a></li>
-        <li><a href="//csclub.org.au/contact"><i class="material-icons">email</i>Contact</a></li>
+        <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+        <li class="active"><a href="/about"><i class="material-icons">info</i>About</a></li>
+        <li><a href="/join"><i class="material-icons">person_add</i>Join</a></li>
+        <li><a href="/contact"><i class="material-icons">email</i>Contact</a></li>
     </ul>
-
     <header>
         <div class="container">
             <div class="row">
@@ -73,7 +81,6 @@
             </div>
         </div>
     </header>
-
     <main>
         <div class="section">
             <div class="container">
@@ -86,9 +93,7 @@
             <div class="section-banner container-full flow-text no-padding">
                 <div class="container">
                     <p>
-                        The Computer Science Club of the University of Adelaide is a <strong>student run club for those with an interest in computer science or computing in general</strong>.
-                        Though we are a university club, we welcome anyone interested in computer science and/or socialising
-                        to join!
+                        The Computer Science Club of the University of Adelaide is a <strong>student run club for those with an interest in computer science or computing in general</strong>. Though we are a university club, we welcome anyone interested in computer science and/or socialising to join!
                     </p>
                 </div>
             </div>
@@ -101,25 +106,19 @@
                             <li>Educational workshops</li>
                             <li>Social nights</li>
                             <li>A wide network of other computer science students and graduates.</li>
-                            <li>We also run cooperative food and drink ventures and hold pubcrawls and BBQs throughout the year,
-                                and hold a pubcrawl each semester.</li>
+                            <li>We also run cooperative food and drink ventures and hold pubcrawls and BBQs throughout the year, and hold a pubcrawl each semester.</li>
                         </ul>
                         <p>
-                            The club runs various competitions throughout the year offering members a chance to have fun and win prizes, these have included
-                            programming and video game competitions. The club also coordinates projects among club members,
-                            allowing members to gain valuable experience working on team projects - while also having fun.
+                            The club runs various competitions throughout the year offering members a chance to have fun and win prizes, these have included programming and video game competitions. The club also coordinates projects among club members, allowing members to gain valuable experience working on team projects - while also having fun.
                         </p>
                         <p>
-                            Founded in 2008 with a large and active group of members, we are always willing to offer academic assistance or make new
-                            friends and all are welcome to join us for an exciting year in a fun, open and unique environment.
+                            Founded in 2008 with a large and active group of members, we are always willing to offer academic assistance or make new friends and all are welcome to join us for an exciting year in a fun, open and unique environment.
                         </p>
 
                         <div class="anchor" id="committee"></div>
                         <h4><i class="fa fa-group heading-icon" aria-hidden="true"></i>Committee Members</h4>
                         <p>
-                            The Computer Science Club committee is made up of a group of students providing their service to the club either in an executive
-                            position or part of the general committee. They work together to manage the club's events, actions,
-                            and direction. The committee consists of the following members:
+                            The Computer Science Club committee is made up of a group of students providing their service to the club either in an executive position or part of the general committee. They work together to manage the club's events, actions, and direction. The committee consists of the following members:
                         </p>
                         <ul class="row committee-members">
                             <li class="col s6 m4 l3">
@@ -227,23 +226,24 @@
                         <p>
                             Failure to follow these rules may result in being kicked or banned from the server.
                         </p>
-                        <div class="row">
+                        <!-- <div class="row">
                             <ul id="slack-invite" class="collapsible" data-collapsible="expandable">
                                 <li>
                                     <div class="collapsible-header flow-text">
                                         Want an invite to the slack server?
                                     </div>
                                     <div class="collapsible-body">
-                                        <!--<h6 class="no-margin">Note:</h6>-->
-                                        <p style="margin-top:0;"><strong>Note: </strong>If you're planning to register as a member of the CS Club
-                                            you can choose to receive an invite in the <a href="//csclub.org.au/join">registration form</a>.</p>
-                                        <p><span>If you have previously signed up without an invite or just want to join the discussions enter your details below and we'll process your request.</span>                                            <span class="cs-pink">*Required</span></p>
+                                        <p style="margin-top:0;"><strong>Note: </strong>If you're planning to register as a member of the CS Club you can choose to receive an invite in the <a href="/join">registration form</a>.</p>
+                                        <p>
+                                            <span>If you have previously signed up without an invite or just want to join the discussions enter your details below and we'll process your request.</span>
+                                            <span class="cs-pink">*Required</span>
+                                        </p>
                                         <div class="collapsible-section-header flow-text">
                                             <h5>Request invite to CS Club Slack</h5>
                                         </div>
                                         <div class="row">
                                             <div class="col s12 l8">
-                                                <form id="slack-form" action="">
+                                                <form id="slack-form">
                                                     <div class="row">
                                                         <div class="input-field col s12 m6">
                                                             <input id="first_name" name="first_name" type="text" required class="validate">
@@ -261,29 +261,28 @@
                                                         </div>
                                                     </div>
                                                     <input id="slack-submit" class="btn" type="submit" value="Send request">
-                                                    <span id="loading" class="hide">
-                                                            <span class="preloader-wrapper small active">
-                                                                <div class="spinner-layer spinner-green-only">
-                                                                    <div class="circle-clipper left">
-                                                                        <div class="circle"></div>
-                                                                    </div>
-                                                                    <div class="gap-patch">
-                                                                        <div class="circle"></div>
-                                                                    </div>
-                                                                    <div class="circle-clipper right">
-                                                                        <div class="circle"></div>
-                                                                    </div>
+                                                    <div id="loading" class="hide">
+                                                        <div class="preloader-wrapper small active">
+                                                            <div class="spinner-layer spinner-green-only">
+                                                                <div class="circle-clipper left">
+                                                                    <div class="circle"></div>
                                                                 </div>
-                                                            </span>
-                                                    </span>
+                                                                <div class="gap-patch">
+                                                                    <div class="circle"></div>
+                                                                </div>
+                                                                <div class="circle-clipper right">
+                                                                    <div class="circle"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </form>
-
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
 
                         <div class="anchor" id="faq"></div>
                         <h4><i class="material-icons heading-icon">help</i>FAQ</h4>
@@ -294,7 +293,7 @@
                                         How do I become a member?
                                     </div>
                                     <div class="collapsible-body">
-                                        <span>You can register as a club member <a href="//csclub.org.au/join">here</a>. Fill out and submit the form.</span>
+                                        <span>You can register as a club member <a href="/join">here</a>. Fill out and submit the form.</span>
                                     </div>
                                 </li>
                                 <li>
@@ -318,7 +317,7 @@
                                         How can I contact the CS Club?
                                     </div>
                                     <div class="collapsible-body">
-                                        <span>If you have any questions or just want to get in touch with us visit our <a href="//csclub.org.au/contact">contact page</a> or send a message to the <a href="https://www.facebook.com/compsci.adl/" target="_blank" title="CS Club Facebook Page">Facebook page</a>.</span>
+                                        <span>If you have any questions or just want to get in touch with us visit our <a href="/contact">contact page</a> or send a message to the <a href="https://www.facebook.com/compsci.adl/" target="_blank" title="CS Club Facebook Page">Facebook page</a>.</span>
                                     </div>
                                 </li>
                             </ul>
@@ -328,17 +327,14 @@
             </div>
         </div>
     </main>
-
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col s12 m8">
                     <h5>Computer Science Club</h5>
+                    <p>The University of Adelaide</p>
                     <p>
-                        The University of Adelaide
-                    </p>
-                    <p>
-                        <a href="//csclub.org.au">Home</a> | <a href="//csclub.org.au/about">About</a> | <a href="//csclub.org.au/join">Join</a>                        | <a href="//csclub.org.au/contact">Contact</a>
+                        <a href="/">Home</a> | <a href="/about">About</a> | <a href="/join">Join</a> | <a href="/contact">Contact</a>
                     </p>
                 </div>
                 <div class="col s12 m4">
@@ -348,35 +344,38 @@
                         <div class="search-results card"></div>
                     </div>
                     <div>
-                        Connect with us<br>
-                        <span class="social-icons">
-                            <a href="https://www.facebook.com/compsci.adl/" target="_blank"><i class="fa fa-facebook-official"></i></a>
-                            <a href="https://twitter.com/CompSciAdl" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://github.com/compsci-adl" target="_blank"><i class="fa fa-github"></i></a>
-                        </span>
+                        Connect with us
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/compsci.adl/" target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+                            <a href="https://twitter.com/CompSciAdl" target="_blank">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/compsci-adl" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <p>
-                        &copy; 2017 Computer Science Club. All rights reserved.
-                    </p>
+                <div class="row">
+                    <div class="col s12">
+                        <p>&copy; 2017 Computer Science Club. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <!-- JS plugins and individual files -->
-    <script src="js/csclub.materialize-v1.0.js"></script>
-    <script src="js/lunr.min.js"></script>
-    <script src="js/search.js"></script>
+    <script src="/js/csclub.materialize-v1.0.js"></script>
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
     <!-- CS Club js -->
-    <script src="js/csclub.common.js"></script>
-    <script src="js/csclub.about.js"></script>
-
+    <script src="/js/csclub.common.js"></script>
+    <script src="/js/csclub.about.js"></script>
 </body>
 
 </html>
