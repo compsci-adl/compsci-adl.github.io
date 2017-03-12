@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  getWinner();  
+  getWinner();
+
 })
 
 function writeWinner(text) {
@@ -25,7 +26,24 @@ function getWinner() {
   console.log(name);
 }
 
-$('#signin').click(function() {
+firebase.auth().onAuthStateChanged(function(user) {
+  var btn = $('#signin')
+  if (user) {
+    // User is signed in.
+    btn.text("Sign Out");
+    btn.click(signin);
+  } else {
+    // User is signed out.
+    btn.text("Sign In");
+    btn.click(signout);
+  }
+});
+
+function signin() {
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider)
-});
+}
+
+function signout() {
+  firebase.auth().signOut();
+}
