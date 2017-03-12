@@ -883,3 +883,12 @@ footer .search-wrapper {
   float:right;
   top:20%;
 }
+
+.fix_receipt main {
+  margin-top: 10rem;
+}
+
+.fix_receipt .preloader-wrapper {
+  margin: 0 auto;
+  display: block;
+}
