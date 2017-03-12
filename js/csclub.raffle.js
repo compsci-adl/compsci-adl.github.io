@@ -14,7 +14,7 @@ function getWinner() {
     var rand = Math.floor(Math.random() * snapshot.numChildren());
     snapshot.forEach(function(snapshot) {
       if (i == rand) {
-        console.log(snapshot.val())
+        writeWinner(snapshot.val().first_name + " " + snapshot.val().last_name);
       }
       i++;
     });
