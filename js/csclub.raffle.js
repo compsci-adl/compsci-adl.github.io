@@ -31,11 +31,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     btn.text("Sign Out");
-    btn.click(signin);
+    btn.click(signout);
   } else {
     // User is signed out.
     btn.text("Sign In");
-    btn.click(signout);
+    btn.click(signin);
   }
 });
 
