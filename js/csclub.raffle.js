@@ -22,7 +22,6 @@ function getWinner() {
             haveWinner = true;
             writeWinner(snapshot.val().first_name + " " + snapshot.val().last_name);
           } 
-          break;
         }
         i++;
       });
@@ -30,8 +29,6 @@ function getWinner() {
   }).catch(function(error) {
     writeWinner("Sorry, you don't have permission to do this."); 
   });
-
-  console.log(name);
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
