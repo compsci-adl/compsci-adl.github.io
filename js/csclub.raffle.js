@@ -45,5 +45,9 @@ function signin() {
 }
 
 function signout() {
-  firebase.auth().signOut();
+  firebase.auth().signOut().then(function() {
+    console.log('signed out');
+  }, function(error) {
+    console.error("signout error", error);
+  });
 }
