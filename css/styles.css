@@ -892,3 +892,11 @@ footer .search-wrapper {
   margin: 0 auto;
   display: block;
 }
+
+.super-huge-btn {
+  height: 100px;
+  font-size:3em;
+  line-height:100px;
+  left:50%;
+  margin: 10px;
+}
