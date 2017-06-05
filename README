@@ -1,0 +1,15 @@
+To test locally, ensure you have Ruby installed. You will need Ruby 2.4, though this is not what comes with most package installers. You can download it from the Ruby website, and compile from source.
+
+Then, (you may need `sudo`)
+
+```
+gem install jekyll bundler
+```
+
+Finally, you can run the development server.
+
+```
+jekyll serve
+```
+
+The address will be displayed in terminal, but it will probably be `localhost:4000`
