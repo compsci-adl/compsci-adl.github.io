@@ -1,6 +1,7 @@
 ---
 title: CS CLUB (MD)
-permalink: hello.html
+layout: default
+permalink: hello
 ---
 
 # Hello World
