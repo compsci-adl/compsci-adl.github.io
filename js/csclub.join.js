@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 			firebase
 				.database()
-				.ref(new Date().getFullYear() + "/" + form_data.first_name + "_" + form_data.last_name)
+				.ref(String(new Date().getFullYear()) + "/" + form_data.first_name + "_" + form_data.last_name)
 				.set(form_data)
 			// console.log(form_data);
 
