@@ -89,7 +89,7 @@ $(document).ready(function() {
 
 			firebase
 				.database()
-				.ref(String(new Date().getFullYear()) + "/" + form_data.first_name + "_" + form_data.last_name)
+				.ref("2018/" + form_data.first_name + "_" + form_data.last_name)
 				.set(form_data)
 			// console.log(form_data);
 

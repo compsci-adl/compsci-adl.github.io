@@ -8,7 +8,7 @@ function writeWinner(text) {
 
 function getWinner() {
 	writeWinner("I'm working on it")
-	var members = firebase.database().ref(String(new Date().getFullYear()) + "/")
+	var members = firebase.database().ref("2018/")
 	members
 		.once("value")
 		.then(function(snapshot) {

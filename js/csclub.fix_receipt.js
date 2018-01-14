@@ -21,7 +21,7 @@ $("#submit").click(function() {
 	try {
 		firebase
 			.database()
-			.ref(String(new Date().getFullYear()) + "/")
+			.ref("2018/")
 			.orderByChild("email")
 			.equalTo(email)
 			.once("value")
