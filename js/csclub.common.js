@@ -18,7 +18,7 @@ if (typeof firebase != 'undefined') {
       storageBucket: "registration-7e966.appspot.com",
       messagingSenderId: "247117631911"
     };
-    firebase.initializeApp(config);
+    firebase.initializeApp(config);  
 
     firebase.auth().onAuthStateChanged(function(user) {
     var btn = $('#signin')
@@ -44,7 +44,7 @@ if (typeof firebase != 'undefined') {
     }, function(error) {
       console.error("signout error", error);
     });
-  }
+  }     
 }
 
 /*
@@ -77,7 +77,7 @@ function formToJson(form) {
 
     $.each(array, function() {
         if (this.value !== 'other') {
-        l    if (json[this.name] !== undefined) {
+            if (json[this.name] !== undefined) {
                 if (!json[this.name].push) {
                     json[this.name] = [json[this.name]];
                 }

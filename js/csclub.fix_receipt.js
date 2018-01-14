@@ -1,10 +1,10 @@
-$("#submit").click(function() {
-	var email = $("#email").val()
-	var receipt = $("#receipt").val()
+$('#submit').click(function() {
+  var email = $('#email').val();
+  var receipt = $('#receipt').val();
 
-	$("form").remove()
+  $('form').remove();
 
-	$("main").append(`
+  $('main').append(`
     <div class="preloader-wrapper small active">
       <div class="spinner-layer spinner-green-only">
         <div class="circle-clipper left">
@@ -16,28 +16,19 @@ $("#submit").click(function() {
         </div>
       </div>
     </div>
-  `)
+  `);
 
-	try {
-		firebase
-			.database()
-			.ref(new Date().getFullYear() + "/")
-			.orderByChild("email")
-			.equalTo(email)
-			.once("value")
-			.then(function(snapshot) {
-				if (!snapshot.exists()) {
-					tryAgain()
-					return
-				}
+  try {
+    firebase.database().ref('members/').orderByChild('email').equalTo(email).once('value').then(function(snapshot){
+        if (!snapshot.exists()) {
+          tryAgain();
+          return;
+        }
 
-				snapshot.forEach(function(snapshot) {
-					snapshot.ref
-						.child("square_receipt")
-						.set(receipt)
-						.then(function(stuff) {
-							$(".preloader-wrapper").remove()
-							$("main").append(`
+        snapshot.forEach(function(snapshot) {
+          snapshot.ref.child('square_receipt').set(receipt).then(function(stuff) {
+            $('.preloader-wrapper').remove();
+            $('main').append(`
               <div class='col s12 m6 offset-m3'>
                 <div class='card'>
                   <div class='card-content'>
@@ -49,21 +40,20 @@ $("#submit").click(function() {
                   </div>
                 </div>
               </div>
-            `)
-						})
-				})
-			})
-			.catch(function(err) {
-				tryAgain()
-			})
-	} catch (err) {
-		tryAgain()
-	}
+            `);
+          });
+        });
+      }).catch(function(err) {
+        tryAgain();
+      })
+  } catch (err) {
+    tryAgain();
+  }
 })
 
 function tryAgain() {
-	$(".preloader-wrapper").remove()
-	$("main").append(`
+  $('.preloader-wrapper').remove();
+  $('main').append(`
     <div class="col s12 m6 offset-m3">
       <div class="card">
         <div class='card-content'>
