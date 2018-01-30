@@ -27,13 +27,21 @@ $(document).ready(function() {
 
 	/* study radio button manipulation */
 	// Focus on the "Please specify" field when "Other" study option is selected
+	$(".study-options input#other_postgrad").on("click", function() {
+		if ($(this).is(":checked")) {
+			$(".study-options input#study3").focus()
+		}
+	})
 	$(".study-options input#other_study").on("click", function() {
 		if ($(this).is(":checked")) {
-			$(".study-options input#study7").focus()
+			$(".study-options input#study4").focus()
 		}
 	})
 	// If the "Please specify" field is selected, also select the radio button
-	$(".study-options input#study7").on("click", function() {
+	$(".study-options input#study3").on("click", function() {
+		$(".study-options input#other_postgrad").prop("checked", true)
+	})
+	$(".study-options input#study4").on("click", function() {
 		$(".study-options input#other_study").prop("checked", true)
 	})
 
@@ -67,7 +75,7 @@ $(document).ready(function() {
 			Materialize.toast(
 				"<i class='material-icons'>report_problem</i>Please prove you're not a robot.",
 				8000,
-				"pink"
+				"pink",
 			)
 			$("#submit").attr("disabled", false)
 		} else if (results["errors"].length > 0) {
@@ -83,14 +91,14 @@ $(document).ready(function() {
 			})
 			$("html, body").animate(
 				{
-					scrollTop: scroll_to - 200
+					scrollTop: scroll_to - 200,
 				},
-				800 / ($(results["errors"][0]).offset().top / 500)
+				800 / ($(results["errors"][0]).offset().top / 500),
 			)
 			Materialize.toast(
 				'<i class="material-icons">report_problem</i>Please fill out all required sections.',
 				8000,
-				"pink"
+				"pink",
 			)
 			$("#submit").attr("disabled", false)
 		} else {
@@ -120,11 +128,11 @@ $(document).ready(function() {
 							($(form_data.first_name).text()
 								? " " + $(form_data.first_name).text()
 								: " " + form_data.first_name) +
-							"!</h3>"
+							"!</h3>",
 					)
 					.append(
 						'<p class="flow-text center">You will receive an official welcome and introduction email soon.</p> \
-          <p class="flow-text center">In the meantime, check out the club <a href="https://www.facebook.com/compsci.adl/" target="_blank" title="CS Club Facebook Page">Facebook page</a> to see what events are coming up.</p>'
+          <p class="flow-text center">In the meantime, check out the club <a href="https://www.facebook.com/compsci.adl/" target="_blank" title="CS Club Facebook Page">Facebook page</a> to see what events are coming up.</p>',
 					)
 				var card = $("#join-form .card")
 				$("#join-form .card-header").remove()
@@ -185,12 +193,20 @@ $(document).ready(function() {
 		if ($("input[name=study][type=radio]:checked").length == 0) {
 			required_fields.push($(".study-options")[0])
 		} else {
+			// Check postgrad field
+			if (
+				$("input[name=study][type=radio]:checked").val() == "Postgraduate" &&
+				$.trim($("input[name=study][type=text]").val()).length == 0
+			) {
+				required_fields.push($("input#study3")[0])
+			}
+
 			// Check if other is checked
 			if (
 				$("input[name=study][type=radio]:checked").val() == "other" &&
 				$.trim($("input[name=study][type=text]").val()).length == 0
 			) {
-				required_fields.push($("input#study7")[0])
+				required_fields.push($("input#study4")[0])
 			}
 		}
 
