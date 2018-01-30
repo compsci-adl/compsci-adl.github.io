@@ -25,6 +25,18 @@ $(document).ready(function() {
 		$(".degree-options input#other_degree").prop("checked", true)
 	})
 
+	/* study radio button manipulation */
+	// Focus on the "Please specify" field when "Other" study option is selected
+	$(".study-options input#other_study").on("click", function() {
+		if ($(this).is(":checked")) {
+			$(".study-options input#study7").focus()
+		}
+	})
+	// If the "Please specify" field is selected, also select the radio button
+	$(".study-options input#study7").on("click", function() {
+		$(".study-options input#other_study").prop("checked", true)
+	})
+
 	/* Events checkbox manipulation */
 	// Focus on the "Please specify" field when "Other" events option is checked
 	$(".event-options input#other_event_check").on("click", function() {
@@ -167,6 +179,18 @@ $(document).ready(function() {
 				$.trim($("input[name=degree][type=text]").val()).length == 0
 			) {
 				required_fields.push($("input#degree6")[0])
+			}
+		}
+
+		if ($("input[name=study][type=radio]:checked").length == 0) {
+			required_fields.push($(".study-options")[0])
+		} else {
+			// Check if other is checked
+			if (
+				$("input[name=study][type=radio]:checked").val() == "other" &&
+				$.trim($("input[name=study][type=text]").val()).length == 0
+			) {
+				required_fields.push($("input#study7")[0])
 			}
 		}
 
