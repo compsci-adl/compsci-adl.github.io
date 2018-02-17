@@ -111,10 +111,10 @@ $(document).ready(function() {
             
             switch($('input[name=degree][type=radio]:checked').val()){
                 case 'other':
-                    form["degree"] = "Other: " + $('input#degree6').val()
+                    form_data["degree"] = "Other: " + $('input#degree6').val()
                     break;
                 default:
-                    form["degree"] = $('input[name=degree][type=radio]:checked').val()
+                    form_data["degree"] = $('input[name=degree][type=radio]:checked').val()
                     break;
                     
             }
