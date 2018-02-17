@@ -108,13 +108,24 @@ $(document).ready(function() {
 			$('#loading').removeClass('hide');
 			Materialize.toast('<i class="material-icons">done</i>Processing request', 8000);
 			var form_data = formToJson('#join-form');
-			console.log(form_data);
 
+            switch($('input[name=study][type=radio]:checked').val()){
+                case 'Postgraduate':
+                    form_data["study"]= "Postgraduate: " + $('input#study3')[0].val()
+                break;
+                case 'Other':
+                    form_data["study"]= "Other: " + $('input#study4')[0].val()
+                break;
+                default:
+                    form_data["study"] = $('input[name=study][type=radio]:checked').val();
+                break;
+            }
+            
 			firebase
 				.database()
 				.ref('2018/' + form_data.first_name + '_' + form_data.last_name)
 				.set(form_data);
-			// console.log();
+			// console.log(form_data);
 
 			// ** DEVELOPMENT - Test completing request
 			var colours = ['blue', 'yellow', 'pink', 'dark'];
@@ -175,7 +186,7 @@ $(document).ready(function() {
      * Validates all inputs of the join form
      * @return {Object} An object containing "errors" and "response_token".
      */
-	function validateForm() {
+		function validateForm() {
 		var results = {};
 		var required_fields = $('input[required]').filter(function(index, element) {
 			return $.trim($(this).val()).length == 0;
@@ -224,7 +235,7 @@ $(document).ready(function() {
 		console.log(captcha_response);
 
 		return results;
-	}
+}
 
 	/*
      * Converts form data to JSON object
