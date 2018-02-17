@@ -108,12 +108,13 @@ $(document).ready(function() {
 			$('#loading').removeClass('hide');
 			Materialize.toast('<i class="material-icons">done</i>Processing request', 8000);
 			var form_data = formToJson('#join-form');
-            switch('input[name=degree][type=radio]:checked').val()){
+            
+            switch($('input[name=degree][type=radio]:checked').val()){
                 case 'other':
                     form["degree"] = "Other: " + $('input#degree6').val()
                     break;
                 default:
-                    form["degree"] = 'input[name=degree][type=radio]:checked').val()
+                    form["degree"] = $('input[name=degree][type=radio]:checked').val()
                     break;
                     
             }
