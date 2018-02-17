@@ -108,12 +108,13 @@ $(document).ready(function() {
 			$('#loading').removeClass('hide');
 			Materialize.toast('<i class="material-icons">done</i>Processing request', 8000);
 			var form_data = formToJson('#join-form');
+			console.log(form_data);
 
 			firebase
 				.database()
 				.ref('2018/' + form_data.first_name + '_' + form_data.last_name)
 				.set(form_data);
-			// console.log(form_data);
+			// console.log();
 
 			// ** DEVELOPMENT - Test completing request
 			var colours = ['blue', 'yellow', 'pink', 'dark'];
@@ -179,7 +180,36 @@ $(document).ready(function() {
 		var required_fields = $('input[required]').filter(function(index, element) {
 			return $.trim($(this).val()).length == 0;
 		});
+		
+		if ($('input[name=degree][type=radio]:checked').length == 0) {
+			required_fields.push($('.degree-options')[0]);
+		} else {
+			// Check if other is checked
+			if (
+				$('input[name=degree][type=radio]:checked').val() == 'other' &&
+				$.trim($('input[name=degree][type=text]').val()).length == 0
+			) {
+				required_fields.push($('input#degree6')[0]);
+			}
+		}
 
+		if ($('input[name=study][type=radio]:checked').length == 0) {
+			required_fields.push($('.study-options')[0]);
+		} else {
+			// Check postgrad field
+			if (
+				$('input[name=study][type=radio]:checked').val() == 'Postgraduate' &&
+				$.trim($('input[name=study][type=text]').val()).length == 0
+			) {
+				required_fields.push($('input#study3')[0]);
+			} else if (
+				// Check if other is checked
+				$('input[name=study][type=radio]:checked').val() == 'other' &&
+				$.trim($('input[name=study][type=text]').val()).length == 0
+			) {
+				required_fields.push($('input#study4')[0]);
+			}
+		}
 		
 
 		var captcha_response = grecaptcha.getResponse();
