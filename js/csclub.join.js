@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	//tracks year level
+	var level = "";
 	/* Availability checkbox manipulation */
 	// If "none" option is checked, uncheck all other options
 	$('.availability-options input#none').on('change', function() {
@@ -85,7 +87,7 @@ $(document).ready(function() {
 				} else {
 					$(value).addClass('invalid-bg');
 				}
-				if ($(value).offset().top < scroll_to) {
+				if ($(value).off().top < scroll_to) {
 					scroll_to = $(value).offset().top;
 				}
 			});
@@ -178,35 +180,7 @@ $(document).ready(function() {
 			return $.trim($(this).val()).length == 0;
 		});
 
-		if ($('input[name=degree][type=radio]:checked').length == 0) {
-			required_fields.push($('.degree-options')[0]);
-		} else {
-			// Check if other is checked
-			if (
-				$('input[name=degree][type=radio]:checked').val() == 'other' &&
-				$.trim($('input[name=degree][type=text]').val()).length == 0
-			) {
-				required_fields.push($('input#degree6')[0]);
-			}
-		}
-
-		if ($('input[name=study][type=radio]:checked').length == 0) {
-			required_fields.push($('.study-options')[0]);
-		} else {
-			// Check postgrad field
-			if (
-				$('input[name=study][type=radio]:checked').val() == 'Postgraduate' &&
-				$.trim($('input[name=study][type=text]').val()).length == 0
-			) {
-				required_fields.push($('input#study3')[0]);
-			} else if (
-				// Check if other is checked
-				$('input[name=study][type=radio]:checked').val() == 'other' &&
-				$.trim($('input[name=study][type=text]').val()).length == 0
-			) {
-				required_fields.push($('input#study4')[0]);
-			}
-		}
+		
 
 		var captcha_response = grecaptcha.getResponse();
 		if (captcha_response.length == 0) {
