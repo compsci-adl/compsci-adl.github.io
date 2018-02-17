@@ -108,13 +108,22 @@ $(document).ready(function() {
 			$('#loading').removeClass('hide');
 			Materialize.toast('<i class="material-icons">done</i>Processing request', 8000);
 			var form_data = formToJson('#join-form');
-
+            switch('input[name=degree][type=radio]:checked').val()){
+                case 'other':
+                    form["degree"] = "Other: " + $('input#degree6').val()
+                    break;
+                default:
+                    form["degree"] = 'input[name=degree][type=radio]:checked').val()
+                    break;
+                    
+            }
+            
             switch($('input[name=study][type=radio]:checked').val()){
                 case 'Postgraduate':
-                    form_data["study"]= "Postgraduate: " + $('input#study3')[0].val()
+                    form_data["study"]= "Postgraduate: " + $('input#study3').val()
                 break;
                 case 'Other':
-                    form_data["study"]= "Other: " + $('input#study4')[0].val()
+                    form_data["study"]= "Other: " + $('input#study4').val()
                 break;
                 default:
                     form_data["study"] = $('input[name=study][type=radio]:checked').val();
@@ -235,7 +244,7 @@ $(document).ready(function() {
 		console.log(captcha_response);
 
 		return results;
-}
+    }
 
 	/*
      * Converts form data to JSON object
