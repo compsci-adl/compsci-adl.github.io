@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="https://csclub.org.au/contact" />
+	<link rel="canonical" href="https://csclub.org.au/sponsors" />
 
-	<title>CS Club | Contact</title>
+	<title>CS Club | Sponsors</title>
 	<!-- Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c=" crossorigin="anonymous" />
 	<!-- General stylesheet -->
@@ -34,7 +34,7 @@
     <![endif]-->
 </head>
 
-<body class="contact">
+<body class="sponsors">
 	<div class="navbar-fixed">
 		<nav>
 			<div class="container nav-wrapper">
@@ -42,16 +42,17 @@
 				<a href="#" class="brand-logo with-logo">CS Club</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="/">Home</a></li>
-					<li><a href="about">About</a></li>
-					<li><a href="join">Join</a></li>
-					<li><a href="/sponsors">Sponsors</a></li>
-					<li class="active"><a href="/contact">Contact</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/join">Join</a></li>
+					<li class="active"><a href="/sponsors">Sponsors</a></li>
+					<li><a href="/contact">Contact</a></li>
 				</ul>
-				<a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons hide-on-large-only">menu</i></a>
+				<a href="#" data-activates="slide-out" class="button-collapse right">
+                    <i class="material-icons hide-on-large-only">menu</i>
+                </a>
 			</div>
 		</nav>
 	</div>
-
 	<ul id="slide-out" class="side-nav">
 		<li class="logo">
 			<a id="logo-container" href="/" class="brand-logo">
@@ -60,80 +61,82 @@
 		</li>
 		<li class="search">
 			<div class="search-wrapper card">
-				<input id="search" placeholder="Search"><i class="material-icons">search</i>
+				<input class="search" placeholder="Search">
+				<i class="material-icons">search</i>
+				<div class="search-results"></div>
 			</div>
 		</li>
 		<li><a href="/"><i class="material-icons">home</i>Home</a></li>
 		<li><a href="/about"><i class="material-icons">info</i>About</a></li>
 		<li><a href="/join"><i class="material-icons">person_add</i>Join</a></li>
-		<li><a href="/sponsors"><i class="material-icons">cake</i>Sponsors</a></li>
-		<li class="active"><a href="/contact"><i class="material-icons">email</i>Contact</a></li>
+		<li class="active"><a href="/sponsors"><i class="material-icons">cake</i>Sponsors</a></li>
+		<li><a href="/contact"><i class="material-icons">email</i>Contact</a></li>
 	</ul>
-
 	<header>
 		<div class="container">
 			<div class="row">
 				<div class="col s12">
 					<h1 class="center">
-                        Contact
+                        Our Sponsors
                     </h1>
 				</div>
 			</div>
 		</div>
 	</header>
-
-	<main class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col s12">
-					<p class="flow-text">
-						Want to get in touch with us? You can <a href="http://m.me/compsci.adl" target="_blank">message us on Facebook</a> or email us at <a href="mailto:contact@csclub.org.au" target="_blank">contact@csclub.org.au</a>.
+	<main>
+		<div class="section">
+			<div class="section-banner container-full flow-text no-padding">
+				<div class="container">
+					<p>
+						The Computer Science Club of the University of Adelaide are proudly supported by our generous sponsors.
 					</p>
 				</div>
 			</div>
-			<!-- <div class="row form-row">
-                <form id="contact-form">
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-header">
-                                <span class="card-title">Contact us</span>
-                            </div>
-                            <div class="card-content">
-                                <div class="cs-pink">*Required</div>
-                                <div class="row">
-                                    <div class="input-field col s12 m6">
-                                        <input id="first_name" name="first_name" type="text" class="validate" required>
-                                        <label for="first_name" class="required">First Name</label>
-                                    </div>
-                                    <div class="input-field col s12 m6">
-                                        <input id="last_name" name="last_name" type="text" class="validate" required>
-                                        <label for="last_name" class="required">Last Name</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12 m12 l6">
-                                        <input id="email" name="email" type="email" class="validate" required>
-                                        <label for="email" class="required">Email</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <textarea id="message" name="message" class="materialize-textarea" required></textarea>
-                                        <label for="message" class="required">Message</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="card-action">
-                                <input id="contact-submit" class="btn-large" type="submit" value="Send">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div> -->
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<img class="sponsor" src="images/sponsors/Availer/availer.png" alt="Availer" draggable="false" style="max-height: 2.4em;" />
+						<p>
+							Availer is an agtech betaworks that builds startups by fast-tracking technology from the research to agribusinesses. Availer believes that Australia should be the global leader in agtech, transforming both Australian and global agriculture. We make this
+							possible by rapidly commercialising IP building agtech startups who can innovate on a global scale.
+						</p>
+					</div>
+					<div class="col s12">
+						<img class="sponsor" src="images/sponsors/Microsoft/microsoft_black.png" alt="Microsoft" draggable="false" />
+						<p>
+							Empower every person and organization on the planet to achieve more. That’s what inspires us, drives our work and pushes us to challenge the status quo every day. At Microsoft we also work to empower our employees so they can achieve more. We believe
+							we should each find meaning in our work and we ensure employees have the freedom and the reach to help make a difference in the world.
+						</p>
+					</div>
+					<div class="col s12">
+						<img class="sponsor" src="images/sponsors/Google/google.png" alt="Google" draggable="false" style="max-height: 3.5em;" />
+						<p>
+							Bring Questions, Build Answers. Our founders set out to build something really useful for people and everything else followed. We're looking for driven students from a variety of diverse backgrounds who'll get to work on cool projects at an enormous scale.
+						</p>
+						<p>
+							In our 12 week internship, you'll work on core products and services, as well as those who support critical functions of our engineering operations. At Google Sydney, we have internships for all years of your university studies. For more information on
+							our hiring process, open roles and resources to help you prepare, check out <a href="https://careers.google.com/students/">here</a>
+						</p>
+					</div>
+					<div class="col s12">
+						<img class="sponsor" src="images/sponsors/qxbranch/qx.png" alt="QX Branch" draggable="false" style="max-height: 5em;" />
+						<p>
+							QxBranch brings world-class skills in quantum computing, software engineering, data analytics and machine learning to tackle complex problems for global leaders in diverse industries. QxBranch has its headquarters in Washington, D.C., with offices in
+							London and Adelaide, Australia.
+						</p>
+					</div>
+					<div class="col s12">
+						<!-- <h4><i class="fa fa-heart heading-icon" aria-hidden="true"></i>CS Club Slack</h4> -->
+						<img class="sponsor" src="images/sponsors/Atlassian/atlassian.png" alt="Atlassian" draggable="false" style="max-height: 2.4em;" />
+						<p>
+							Atlassian is a leading provider of collaboration, development, and issue tracking software for teams. With over 85,000 global customers (including 85 of the Fortune 100), we’re advancing the power of collaboration with products including Jira, Confluence,
+							Bitbucket, Trello, and now Stride. Driven by honest values, an amazing culture, and consistent revenue growth, we’re out to unleash the potential of every team.
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
-
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -182,7 +185,7 @@
 	<script src="/js/search.js"></script>
 	<!-- CS Club js -->
 	<script src="/js/csclub.common.js"></script>
-	<script src="/js/csclub.contact.js"></script>
+	<script src="/js/csclub.about.js"></script>
 </body>
 
 </html>
