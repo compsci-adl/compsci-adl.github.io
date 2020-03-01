@@ -919,9 +919,6 @@ footer .search-wrapper {
 	margin: 10px;
 }
 
-.nominations .card {
-}
-
 .sponsor {
 	display: inline-block;
 	max-height: 3em;
@@ -936,4 +933,108 @@ footer .search-wrapper {
 
 .sponsor-container {
 	text-align: center;
+}
+
+.imageEvents {
+	opacity: 1;
+	display: block;
+	width: 80%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+	margin: auto;
+}
+  
+.middleEvents {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	margin: auto;
+	left: 25%;
+	text-align: center;
+}
+
+.middleEventsFar {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	margin: auto;
+	left: 30%;
+	text-align: center;
+}
+  
+.containerEvents:hover .imageEvents {
+	opacity: 0.3;
+}
+  
+.containerEvents:hover .middleEvents {
+	opacity: 1;
+}
+  
+.textEvents {
+	background-color: rgb(215, 218, 12);
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+}
+
+.centerHover {
+	margin: auto;
+	box-shadow: none;
+}
+
+#hoverImageTable {
+	border: hidden;
+	padding: 1.5em 1em 1em 0em;
+}
+
+#hoverImageTable2 {
+	padding: 1.5em 0em 1em 2em;
+}
+
+.hoverImageContainer {
+	position: relative;
+	top: 20%;
+	left: 0%;
+	background-color: black;
+}
+
+.hoverImage {
+	opacity: 1;
+	display: block;
+	max-height: 21vw;
+	height: auto;
+	transition: 1.5s ease;
+	backface-visibility: hidden;
+}
+	
+.hoverImageMiddle {
+	transition: 1s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+	
+.hoverImageContainer:hover .hoverImage {
+	opacity: 0.1;
+}
+	
+.hoverImageContainer:hover .hoverImageMiddle {
+	opacity: 1;
+}
+	
+.hoverImageText {
+	color: white;
+	font-weight: 800;
+	letter-spacing: 0.225em;
+	font-size: 2.3em;
+	line-height: 1em;
+}
+.hoverImageText2 {
+	color: white;
+	font-weight: 100;
 }
