@@ -138,10 +138,19 @@ header .container {
 }
 
 .material-icons.heading-icon,
-.fa.heading-icon {
+.fa.heading-icon
+{
 	vertical-align: bottom;
 	font-size: inherit;
 	width: 3rem;
+}
+
+.fab.heading-icon
+{
+	vertical-align: bottom;
+	font-size: inherit;
+	padding-left: 0.2rem;
+	width: 2.8rem;
 }
 
 form ul {
@@ -201,6 +210,10 @@ ul.side-nav li.logo a:hover {
 .navbar-fixed {
 	z-index: 997;
 	flex: 0 0 auto;
+}
+
+.navbar-fixed ul {
+	z-index: 998;
 }
 
 nav {
@@ -856,8 +869,9 @@ footer .search-wrapper {
 	}
 }
 @media only screen and (min-width: 1500px) {
+	.section h1,
 	#join h1 {
-		font-size: 8rem;
+		font-size: 3rem;
 	}
 }
 
@@ -988,10 +1002,6 @@ footer .search-wrapper {
 	padding: 1.5em 1em 1em 0em;
 }
 
-#hoverImageTable2 {
-	padding: 1.5em 0em 1em 2em;
-}
-
 .hoverImageContainer {
 	position: relative;
 	top: 20%;
@@ -1000,7 +1010,7 @@ footer .search-wrapper {
 }
 
 .hoverImage {
-	opacity: 1;
+	opacity: 0.1;
 	display: block;
 	max-height: 21vw;
 	height: auto;
@@ -1010,7 +1020,7 @@ footer .search-wrapper {
 	
 .hoverImageMiddle {
 	transition: 1s ease;
-	opacity: 0;
+	opacity: 1;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -1028,13 +1038,15 @@ footer .search-wrapper {
 }
 	
 .hoverImageText {
-	color: white;
+	color: black;
 	font-weight: 800;
-	letter-spacing: 0.225em;
-	font-size: 2.3em;
+	letter-spacing: 0.1em;
+	font-size: 2.25em;
 	line-height: 1em;
 }
 .hoverImageText2 {
-	color: white;
-	font-weight: 100;
+	padding-top: 0.5em;
+	color: black;
+	font-size: 1.25em;
+	font-weight: 300;
 }
