@@ -84,176 +84,12 @@
 					New members are always welcome! Enter your details in the form below to register as a member.
 				</p>
 				<p>
-					<strong>Membership costs $5.</strong> You can pay for membership at a club event or contact one of the <a href="/about#committee">committee members</a>. Currently we can only take payment in person, apologies for any inconvenience.
+					<strong>Membership costs $10.</strong> You can pay for membership at a club event or contact one of the <a href="/about#committee">committee members</a>. Currently we can only take payment in person, apologies for any inconvenience.
 				</p>
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<form id="join-form" method="POST">
-					<div class="col s12">
-						<div class="card">
-							<div class="card-header">
-								<div class="card-title">Membership Registration</div>
-								<div class="cs-pink">*Required</div>
-							</div>
-							<div class="card-content" style="padding-top:0;">
-								<div class="card-section">
-									<div class="card-section-header">
-										<h4 class="required-section"><i class="material-icons heading-icon">perm_identity</i>Your details</h4>
-									</div>
-									<div class="row">
-										<div class="input-field col s12 m6">
-											<input name="first_name" id="first_name" type="text" class="validate" required>
-											<label for="first_name">First Name</label>
-										</div>
-										<div class="input-field col s12 m6">
-											<input name="last_name" id="last_name" type="text" class="validate" required>
-											<label for="last_name">Last Name</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="input-field col s12 m12 l6">
-											<input name="email" id="email" type="email" class="validate" required>
-											<label for="email">Email</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="card-section">
-									<div class="card-section-header">
-										<h4>
-											<i class="material-icons heading-icon">card_membership</i>Your Membership
-										</h4>
-									</div>
-
-									<div class="row">
-										<div class="col s12 m12">
-											<p>If you've already paid, enter your receipt here. If you have not, please see a committee member to arrange payment.</p>
-										</div>
-										<div class="input-field col s12 m6">
-											<label for="square_receipt">Square Receipt</label>
-											<input name="square_receipt" id="square_receipt" type="text" class="validate">
-										</div>
-									</div>
-								</div>
-
-								<div class="card-section">
-									<div class="card-section-header">
-										<h4>
-											<i class="material-icons heading-icon">school</i>University
-										</h4>
-									</div>
-									<div class="row">
-										<div class="input-field col s12 m2">
-											<label for="student_no">Student No.</label>
-											<input name="student_no" id="student_no" type="text" class="validate" required placeholder="a1234567">
-										</div>
-									</div>
-									<div class="row">
-										<div class="col s12">
-											<h5>What degree are you studying?</h5>
-											<ul class="degree-options">
-												<li>
-													<input name="degree" id="degree1" type="radio" value="Computer Science" />
-													<label for="degree1">Computer Science</label>
-												</li>
-												<li>
-													<input name="degree" id="degree2" type="radio" value="Computer Science (Advanced)" />
-													<label for="degree2">Computer Science (Advanced)</label>
-												</li>
-												<li>
-													<input name="degree" id="degree3" type="radio" value="Software Engineering" />
-													<label for="degree3">Software Engineering</label>
-												</li>
-												<li>
-													<input name="degree" id="degree4" type="radio" value="Mathematical and Computer Sciences" />
-													<label for="degree4">Mathematical and Computer Sciences</label>
-												</li>
-												<li>
-													<input name="degree" id="degree5" type="radio" value="Electrical Engineering" />
-													<label for="degree5">Electrical Engineering</label>
-												</li>
-												<li>
-													<input name="degree" id="other_degree" type="radio" value="other" />
-													<label for="degree6">
-                                                        Other:
-                                                        <span class="input-field inline inline-radio">
-															<input name="degree" id="degree6" placeholder="Please specify" type="text" class="validate">
-														</span>
-                                                    </label>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col s12">
-											<h5>What level of study are you in?</h5>
-											<ul class="study-options">
-												<li>
-													<input name="study" id="study1" type="radio" value="Undergraduate" />
-													<label for="study1">Undergraduate</label>
-												</li>
-												<li>
-													<input name="study" id="study2" type="radio" value="Honours" />
-													<label for="study2">Honours</label>
-												</li>
-												<li>
-													<input name="study" id="other_postgrad" type="radio" value="Postgraduate" />
-													<label for="study3">
-                                                        Post Graduate:
-                                                        <span class="input-field inline inline-radio">
-															<input name="study" id="study3" placeholder="Please specify" type="text" class="validate">
-														</span>
-                                                    </label>
-												</li>
-												<li>
-													<input name="study" id="other_study" type="radio" value="Other" />
-													<label for="study4">
-                                                        Other:
-                                                        <span class="input-field inline inline-radio">
-															<input name="study" id="study4" placeholder="Please specify" type="text" class="validate">
-														</span>
-                                                    </label>
-												</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="row">
-										<div class="col s12">
-											<h5>What year are you in?</h5>
-											<div class="input-field col s6 m3">
-												<input name="year" id="year" type="number" class="validate" required min="1" max="8" step="1" />
-												<label for="year">Year</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="g-recaptcha" data-sitekey="6LeTtREUAAAAAPKjeO8RLUN5-ibl-O8mln3Rkq3b"></div>
-							</div>
-							<div class="card-action">
-								<input id="submit" type="submit" class="btn-large" value="Join CS Club" />
-								<div id="loading" class="hide">
-									<div class="preloader-wrapper small active">
-										<div class="spinner-layer spinner-green-only">
-											<div class="circle-clipper left">
-												<div class="circle"></div>
-											</div>
-											<div class="gap-patch">
-												<div class="circle"></div>
-											</div>
-											<div class="circle-clipper right">
-												<div class="circle"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScM9jQvcpOYSPUADUYkMGPCCm8GOYexffg05ZLIuFoHnoSnpQ/viewform?embedded=true" width="100%" height="2300" frameborder="0" marginheight="0" marginwidth="0">Loading form...</iframe>
 		</div>
 	</main>
 
@@ -266,7 +102,6 @@
 	<script src="/js/lunr.min.js"></script>
 	<!-- CS Club common js -->
 	<script src="/js/csclub.common.js"></script>
-	<script src="/js/csclub.join.js"></script>
 	<!-- Google reCaptcha -->
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 </body>

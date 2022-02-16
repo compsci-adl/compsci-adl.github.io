@@ -533,19 +533,6 @@ footer .search-wrapper {
 	padding: 1rem;
 }
 
-#join-form .card .card-content .card-section .row {
-	margin-top: 0.82rem;
-}
-#join-form .card .card-content .card-section .row h5 {
-	margin-top: 0;
-}
-#join-form .card .card-content .card-section .row ~ .row {
-	margin-top: 0;
-}
-#join-form .card .card-content .card-section .row ~ .row h5 {
-	margin-top: 0.82rem;
-}
-
 @media only screen and (min-width: 420px) {
 	.input-field.inline input[type='text'] {
 		width: 250px;
@@ -562,30 +549,6 @@ footer .search-wrapper {
 .input-field.inline.inline-checkbox input {
 	height: 1.5rem;
 	margin: 0;
-}
-
-.row.degree-options .col p:last-child {
-	margin-bottom: 24px;
-}
-
-@media only screen and (max-width: 600px) {
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) input,
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) textarea,
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) label,
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) .validate ~ label,
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) .autocomplete-content {
-		margin-left: 3rem;
-		width: 92%;
-		width: calc(100% - 3rem);
-	}
-
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) label {
-		margin-left: 3rem;
-	}
-	.input-group .input-field.prefixed ~ .input-field:not(.prefixed) input {
-		width: 80%;
-		width: calc(100% - 3rem);
-	}
 }
 
 /* SECTIONS */
