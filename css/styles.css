@@ -897,11 +897,9 @@ footer .search-wrapper {
 }
 
 .sponsor {
-	display: inline-block;
-	max-height: 3em;
+	max-height: 5em;
 	margin-right: 35px;
 	margin-top: 10px;
-	opacity: 0.7;
 }
 
 .sponsor:last-child {
