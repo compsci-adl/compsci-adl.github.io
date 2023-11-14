@@ -1,138 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="canonical" href="https://csclub.org.au/contact" />
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="https://csclub.org.au/contact" />
+		<title>CS Club | Contact</title>
+		<!-- Materialize -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+			integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c="
+			crossorigin="anonymous"
+		/>
+		<!-- General stylesheet -->
+		<link href="/css/styles.css" rel="stylesheet" />
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/images/logo_sm.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+		<link rel="manifest" href="/images/manifest.json" />
+		<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5" />
+		<link rel="shortcut icon" href="/images/favicon.ico" />
+		<meta name="msapplication-config" content="/images/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
 
-	<title>CS Club | Contact</title>
-	<!-- Materialize -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c=" crossorigin="anonymous" />
-	<!-- General stylesheet -->
-	<link href="/css/styles.css" rel="stylesheet">
-	<!-- Icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="/images/logo_sm.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/images/manifest.json">
-	<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<meta name="msapplication-config" content="/images/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<!-- jQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="/js/load.js"></script>
+	</head>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="/js/load.js"></script>
-</head>
+	<body class="contact">
+		<div id="navbar"></div>
 
-<body class="contact">
+		<ul id="slide-out" class="side-nav">
+			<li class="logo">
+				<a id="logo-container" href="/" class="brand-logo">
+					<img src="/images/logo.png" style="height: 100%" alt="" />
+				</a>
+			</li>
+			<li class="search">
+				<div class="search-wrapper card">
+					<input id="search" placeholder="Search" /><i class="material-icons">search</i>
+				</div>
+			</li>
+			<li>
+				<a href="/"><i class="material-icons">home</i>Home</a>
+			</li>
+			<li>
+				<a href="/about"><i class="material-icons">info</i>About</a>
+			</li>
+			<li>
+				<a href="/join"><i class="material-icons">person_add</i>Join</a>
+			</li>
+			<li>
+				<a href="/sponsors"><i class="material-icons">cake</i>Sponsors</a>
+			</li>
+			<li class="active">
+				<a href="/contact"><i class="material-icons">email</i>Contact</a>
+			</li>
+		</ul>
 
-	<div id="navbar"></div>
-
-	<ul id="slide-out" class="side-nav">
-		<li class="logo">
-			<a id="logo-container" href="/" class="brand-logo">
-                <img src="/images/logo.png" style="height: 100%;" alt="">
-            </a>
-		</li>
-		<li class="search">
-			<div class="search-wrapper card">
-				<input id="search" placeholder="Search"><i class="material-icons">search</i>
-			</div>
-		</li>
-		<li><a href="/"><i class="material-icons">home</i>Home</a></li>
-		<li><a href="/about"><i class="material-icons">info</i>About</a></li>
-		<li><a href="/join"><i class="material-icons">person_add</i>Join</a></li>
-		<li><a href="/sponsors"><i class="material-icons">cake</i>Sponsors</a></li>
-		<li class="active"><a href="/contact"><i class="material-icons">email</i>Contact</a></li>
-	</ul>
-
-	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col s12">
-					<h1 class="center">
-                        Contact
-                    </h1>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h1 class="center">Contact</h1>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<main class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col s12">
-					<p class="flow-text">
-						Want to get in touch with us? You can <a href="http://m.me/compsci.adl" target="_blank">message us on Facebook</a> or email us at <a href="mailto:contact@csclub.org.au" target="_blank">contact@csclub.org.au</a>.
-					</p>
+		<main class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<p class="flow-text">
+							Want to get in touch with us? You can
+							<a href="http://m.me/compsci.adl" target="_blank">message us on Facebook</a> or email us at
+							<a href="mailto:contact@csclub.org.au" target="_blank">contact@csclub.org.au</a>.
+						</p>
+					</div>
 				</div>
-			</div>
-			<div class="row form-row">
-                <form action="mailto:contact@csclub.org.au?Subject=CS Club: Website Contact Us Form" method="post" enctype="text/plain">
-                    <div class="col s12">
-                        <div class="card">
-                            <div class="card-header">
-                                <span class="card-title">Contact us</span>
-                            </div>
-                            <div class="card-content">
-                                <div class="cs-pink">*Required</div>
-                                <div class="row">
-                                    <div class="input-field col s12 m6">
-                                        <input id="first_name" name="name" type="text" class="validate" required>
-                                        <label for="first_name" class="required">Full Name</label>
-									</div>
-									<div class="input-field col s12 m12 l6">
-                                        <input id="email" name="mail" type="email" class="validate" required>
-                                        <label for="email" class="required">Email</label>
-                                    </div>
-                                    <!-- 
+				<div class="row form-row">
+					<form
+						action="mailto:contact@csclub.org.au?Subject=CS Club: Website Contact Us Form"
+						method="post"
+						enctype="text/plain"
+					>
+						<div class="col s12">
+							<div class="card">
+								<div class="card-header">
+									<span class="card-title">Contact us</span>
+								</div>
+								<div class="card-content">
+									<div class="cs-pink">*Required</div>
+									<div class="row">
+										<div class="input-field col s12 m6">
+											<input id="first_name" name="name" type="text" class="validate" required />
+											<label for="first_name" class="required">Full Name</label>
+										</div>
+										<div class="input-field col s12 m12 l6">
+											<input id="email" name="mail" type="email" class="validate" required />
+											<label for="email" class="required">Email</label>
+										</div>
+										<!--
 										<div class="input-field col s12 m6">
                                         <input id="last_name" name="last_name" type="text" class="validate" required>
                                         <label for="last_name" class="required">Last Name</label>
 									</div>
 									-->
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <textarea id="message" name="comment" class="materialize-textarea" required></textarea>
-                                        <label for="message" class="required">Message</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-action">
-                                <input class="btn-large" type="submit" value="Send">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-		</div>
-	</main>
+									</div>
+									<div class="row">
+										<div class="input-field col s12">
+											<textarea
+												id="message"
+												name="comment"
+												class="materialize-textarea"
+												required
+											></textarea>
+											<label for="message" class="required">Message</label>
+										</div>
+									</div>
+								</div>
+								<div class="card-action">
+									<input class="btn-large" type="submit" value="Send" />
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
 
-	<div id="footer"></div>
+		<div id="footer"></div>
 
-	<!-- JS plugins and individual files -->
-	<script src="/js/csclub.materialize-v1.0.js"></script>
-	<script src="/js/lunr.min.js"></script>
-	<!-- CS Club js -->
-	<script src="/js/csclub.common.js"></script>
-	<script src="/js/csclub.contact.js"></script>
-</body>
-
+		<!-- JS plugins and individual files -->
+		<script src="/js/csclub.materialize-v1.0.js"></script>
+		<script src="/js/lunr.min.js"></script>
+		<!-- CS Club js -->
+		<script src="/js/csclub.common.js"></script>
+		<script src="/js/csclub.contact.js"></script>
+	</body>
 </html>
