@@ -1,133 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="canonical" href="https://csclub.org.au/sponsors" />
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="https://csclub.org.au/sponsors" />
+		<title>CS Club | Sponsors</title>
+		<!-- Materialize -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+			integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c="
+			crossorigin="anonymous"
+		/>
+		<!-- General stylesheet -->
+		<link href="/css/styles.css" rel="stylesheet" />
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="/images/logo_sm.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
+		<link rel="manifest" href="/images/manifest.json" />
+		<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5" />
+		<link rel="shortcut icon" href="/images/favicon.ico" />
+		<meta name="msapplication-config" content="/images/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
 
-	<title>CS Club | Sponsors</title>
-	<!-- Materialize -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" integrity="sha256-mDRlQYEnF3BuKJadRTD48MaEv4+tX8GVP9dEvjZRv3c=" crossorigin="anonymous" />
-	<!-- General stylesheet -->
-	<link href="/css/styles.css" rel="stylesheet">
-	<!-- Icons -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="/images/logo_sm.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="/images/manifest.json">
-	<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<meta name="msapplication-config" content="/images/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<!-- jQuery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<script src="/js/load.js"></script>
+	</head>
 
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="/js/load.js"></script>
-</head>
+	<body class="sponsors">
+		<div id="navbar"></div>
 
-<body class="sponsors">
-
-	<div id="navbar"></div>
-
-	<ul id="slide-out" class="side-nav">
-		<li class="logo">
-			<a id="logo-container" href="/" class="brand-logo">
-                <img src="/images/logo.png" style="height: 100%;" alt="">
-            </a>
-		</li>
-		<li class="search">
-			<div class="search-wrapper card">
-				<input class="search" placeholder="Search">
-				<i class="material-icons">search</i>
-				<div class="search-results"></div>
-			</div>
-		</li>
-		<li><a href="/"><i class="material-icons">home</i>Home</a></li>
-		<li><a href="/about"><i class="material-icons">info</i>About</a></li>
-		<li><a href="/join"><i class="material-icons">person_add</i>Join</a></li>
-		<li class="active"><a href="/sponsors"><i class="material-icons">cake</i>Sponsors</a></li>
-		<li><a href="/contact"><i class="material-icons">email</i>Contact</a></li>
-	</ul>
-
-	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col s12">
-					<h1 class="center">
-                        Our Sponsors
-                    </h1>
+		<ul id="slide-out" class="side-nav">
+			<li class="logo">
+				<a id="logo-container" href="/" class="brand-logo">
+					<img src="/images/logo.png" style="height: 100%" alt="" />
+				</a>
+			</li>
+			<li class="search">
+				<div class="search-wrapper card">
+					<input class="search" placeholder="Search" />
+					<i class="material-icons">search</i>
+					<div class="search-results"></div>
 				</div>
-			</div>
-		</div>
-	</header>
+			</li>
+			<li>
+				<a href="/"><i class="material-icons">home</i>Home</a>
+			</li>
+			<li>
+				<a href="/about"><i class="material-icons">info</i>About</a>
+			</li>
+			<li>
+				<a href="/join"><i class="material-icons">person_add</i>Join</a>
+			</li>
+			<li class="active">
+				<a href="/sponsors"><i class="material-icons">cake</i>Sponsors</a>
+			</li>
+			<li>
+				<a href="/contact"><i class="material-icons">email</i>Contact</a>
+			</li>
+		</ul>
 
-	<main>
-		<div class="section">
-			<div class="section-banner container-full flow-text no-padding">
-				<div class="container">
-					<p>
-						The Computer Science Club of the University of Adelaide are proudly supported by our generous sponsors.
-					</p>
-				</div>
-			</div>
-			<div class="container sponsor-container">
+		<header>
+			<div class="container">
 				<div class="row">
 					<div class="col s12">
-						<a href="https://www.macquarie.com.au/">
-							<img class="sponsor" src="images/sponsors/Macquarie_Group-Logo.svg" alt="Macquarie" draggable="false" />
-						</a>
-						<p>At Macquarie, we’re connecting people and data, building platforms and applications,
-and designing tomorrow’s technology solutions. We have market leading expertise, so
-where could a career in Technology at Macquarie take you? Join our leaders and
-graduates to gain first-hand insights into a career in Technology.</p>
+						<h1 class="center">Our Sponsors</h1>
 					</div>
-					<div class="col s12">
-						<a href="https://www.pwc.com.au/">
-							<img style="height: 25%; width: 15%" class="sponsor" src="images/sponsors/PricewaterhouseCoopers-Logo.svg" alt="PWC" draggable="false" />
-						</a>
-						<p>At PwC, our purpose is to build trust in society and solve important problems. In our increasingly
-complex world, we work with businesses, government and the community to deliver solutions
-and sustained outcomes. To help Australia continue to thrive and grow.
-We’re a network of firms in 152 countries with over 328,000 people. PwC is one of the top 50
-brands worldwide and PwC Australia is among LinkedIn’s top companies for where Australians
-want to work.</p>
-					</div>
-					<div class="col s12">
-						<a href="https://www.atlassian.com/company/careers/resources/perk-and-benefits/global/australia">
-							<img style="height: 30%; width: 30%" class="sponsor" src="images/sponsors/Atlassian-Logo.svg" alt="Atlassian" draggable="false" />
-						</a>
-						<p>Here at Atlassian we believe that behind every great human achievement, there is a team. From medicine and space travel, to disaster response and pizza deliveries, our products help teams all over the planet advance humanity through the power of software. Our mission is to help unleash the potential of every team.
+				</div>
+			</div>
+		</header>
 
+		<main>
+			<div class="section">
+				<div class="section-banner container-full flow-text no-padding">
+					<div class="container">
+						<p>
+							The Computer Science Club of the University of Adelaide are proudly supported by our
+							generous sponsors.
 						</p>
 					</div>
 				</div>
+				<div class="container sponsor-container">
+					<div class="row">
+						<div class="col s12">
+							<a href="https://www.macquarie.com.au/">
+								<img
+									style="height: 18%; width: 36%"
+									class="sponsor"
+									src="images/sponsors/Macquarie_Group-Logo.svg"
+									alt="Macquarie"
+									draggable="false"
+								/>
+							</a>
+							<p>
+								At Macquarie, we’re connecting people and data, building platforms and applications, and
+								designing tomorrow’s technology solutions. We have market leading expertise, so where
+								could a career in Technology at Macquarie take you? Join our leaders and graduates to
+								gain first-hand insights into a career in Technology.
+							</p>
+						</div>
+						<div class="col s12">
+							<a href="https://www.pwc.com.au/">
+								<img
+									style="height: 18.75%; width: 15%"
+									class="sponsor"
+									src="images/sponsors/PricewaterhouseCoopers-Logo.svg"
+									alt="PWC"
+									draggable="false"
+								/>
+							</a>
+							<p>
+								At PwC, our purpose is to build trust in society and solve important problems. In our
+								increasingly complex world, we work with businesses, government and the community to
+								deliver solutions and sustained outcomes. To help Australia continue to thrive and grow.
+								We’re a network of firms in 152 countries with over 328,000 people. PwC is one of the
+								top 50 brands worldwide and PwC Australia is among LinkedIn’s top companies for where
+								Australians want to work.
+							</p>
+						</div>
+						<div class="col s12">
+							<a
+								href="https://www.atlassian.com/company/careers/resources/perk-and-benefits/global/australia"
+							>
+								<img
+									style="height: 32%; width: 32%"
+									class="sponsor"
+									src="images/sponsors/Atlassian-Logo.svg"
+									alt="Atlassian"
+									draggable="false"
+								/>
+							</a>
+							<p>
+								Here at Atlassian we believe that behind every great human achievement, there is a team.
+								From medicine and space travel, to disaster response and pizza deliveries, our products
+								help teams all over the planet advance humanity through the power of software. Our
+								mission is to help unleash the potential of every team.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</main>
+		</main>
 
-	<div id="footer"></div>
+		<div id="footer"></div>
 
-	<!-- JS plugins and individual files -->
-	<script src="/js/csclub.materialize-v1.0.js"></script>
-	<script src="/js/lunr.min.js"></script>
-	<!-- CS Club js -->
-	<script src="/js/csclub.common.js"></script>
-	<script src="/js/csclub.about.js"></script>
-</body>
-
+		<!-- JS plugins and individual files -->
+		<script src="/js/csclub.materialize-v1.0.js"></script>
+		<script src="/js/lunr.min.js"></script>
+		<!-- CS Club js -->
+		<script src="/js/csclub.common.js"></script>
+		<script src="/js/csclub.about.js"></script>
+	</body>
 </html>
